@@ -1,0 +1,40 @@
+  Scaffold(
+    bottomNavigationBar: BottomNavigationBar(
+      type: BottomNavigationBarType.fixed,
+      items: <BottomNavigationBarItem>[
+        BottomNavigationBarItem(
+          icon: SvgPicture.asset(
+            "assets/compass.svg",
+            height: 24,
+            width: 24,
+          ),
+          label: 'Discover',
+        ),
+        BottomNavigationBarItem(
+          icon: SvgPicture.asset(
+            "assets/shopping.svg",
+            height: 24,
+            width: 24,
+          ),
+          label: 'Browse',
+        ),
+        BottomNavigationBarItem(
+          icon: SvgPicture.asset(
+            "assets/heart.svg",
+            height: 24,
+            width: 24,
+          ),
+          label: 'Favourite',
+        ),
+        BottomNavigationBarItem(
+          icon: SvgPicture.asset(
+            "assets/more.svg",
+            height: 24,
+            width: 24,
+          ),
+          label: 'More',
+        ),
+      ],
+      selectedItemColor: Colors.black,
+    ),
+  );
