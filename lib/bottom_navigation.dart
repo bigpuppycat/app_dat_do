@@ -1,3 +1,7 @@
+import 'package:app_dat_do/discover/Browse.dart';
+import 'package:app_dat_do/discover/Favourite.dart';
+import 'package:app_dat_do/discover/More.dart';
+import 'package:app_dat_do/discover/discover.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -10,21 +14,11 @@ class BottomNavigation extends StatefulWidget {
 
 class _MyStatefulWidgetState extends State<BottomNavigation> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 24, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'HOME PAGE',
-      style: optionStyle,
-    ),
-    Text(
-      'COURSE PAGE',
-      style: optionStyle,
-    ),
-    Text(
-      'CONTACT GFG',
-      style: optionStyle,
-    ),
+  final List<Widget> _widgetOptions = <Widget>[
+    const Discover(),
+    const Browse(),
+    const Favourite(),
+    const More()
   ];
 
   void _onItemTapped(int index) {
@@ -81,6 +75,11 @@ class _MyStatefulWidgetState extends State<BottomNavigation> {
           label: 'Favourite',
         ),
         BottomNavigationBarItem(
+          activeIcon: SvgPicture.asset(
+            "assets/more.svg",
+            height: 24,
+            width: 24,
+          ),
           icon: SvgPicture.asset(
             "assets/more.svg",
             height: 24,

@@ -1,3 +1,5 @@
+import 'package:app_dat_do/discover/component/list.dart';
+import 'package:app_dat_do/discover/popular_product.dart';
 import 'package:flutter/material.dart';
 
 class Body extends StatelessWidget {
@@ -9,14 +11,8 @@ class Body extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            Text(
-              "Discover",
-              textAlign: TextAlign.left,
-              style: Theme.of(context)
-                  .textTheme
-                  .headline4!
-                  .copyWith(fontWeight: FontWeight.w500, color: Colors.black),
-            ),
+            const CardExample(),
+            PopularProducts(),
           ],
         ),
       ),
