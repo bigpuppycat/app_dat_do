@@ -7,64 +7,104 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            const Text(
-              'Đồ ăn cho heo',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 36,
+        child: Padding(
+          padding: const EdgeInsets.all(24.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              const SizedBox(
+                height: 16,
               ),
-            ),
-            const SizedBox(
-              height: 100,
-            ),
-            Container(
-              height: 400,
-              width: 400,
-              alignment: Alignment.center,
-              child: Image.asset(
-                'assets/2.jpg',
-                fit: BoxFit.fill,
-              ),
-            ),
-            // RaisedButton(
-            //   child: const Text("heo bé"),
-            //   onPressed: () {},
-            // )
-            OutlinedButton(
-                style: OutlinedButton.styleFrom(
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  // Foreground color
+                  onPrimary: Theme.of(context).colorScheme.onPrimary,
+                  // Background color
+                  primary: Theme.of(context).colorScheme.primary,
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30)),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  padding: EdgeInsets.symmetric(vertical: 20, horizontal: 74),
                 ),
-                onPressed: () {},
-                child: const Text('Đăng nhập bằng GOOGLE')),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                // Foreground color
-                onPrimary: Theme.of(context).colorScheme.onPrimary,
-                // Background color
-                primary: Theme.of(context).colorScheme.primary,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30)),
-              ).copyWith(elevation: ButtonStyleButton.allOrNull(0.0)),
-              onPressed: () {},
-              child: const Text('Đăng nhập bằng FACEBOOK'),
-            ),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                // Foreground color
-                onPrimary: Theme.of(context).colorScheme.onPrimary,
-                // Background color
-                primary: Theme.of(context).colorScheme.primary,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30)),
-              ).copyWith(elevation: ButtonStyleButton.allOrNull(0.0)),
-              onPressed: () {},
-              child: const Text('Đăng nhập bằng EMAIL'),
-            ),
-          ],
+                onPressed: () {
+                  ;
+                },
+                child: const Text('Tài khoản'),
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  // Foreground color
+                  onPrimary: Theme.of(context).colorScheme.onPrimary,
+                  // Background color
+                  primary: Theme.of(context).colorScheme.primary,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  padding: EdgeInsets.symmetric(vertical: 20, horizontal: 88),
+                ),
+                onPressed: () {
+                  ;
+                },
+                child: const Text('Đăng nhập bằng EMAIL'),
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  // Foreground color
+                  onPrimary: Theme.of(context).colorScheme.onPrimary,
+                  // Background color
+                  primary: Theme.of(context).colorScheme.primary,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  padding: EdgeInsets.symmetric(vertical: 20, horizontal: 88),
+                ),
+                onPressed: () {
+                  ;
+                },
+                child: const Text('Đăng nhập bằng EMAIL'),
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  // Foreground color
+                  onPrimary: Theme.of(context).colorScheme.onPrimary,
+                  // Background color
+                  primary: Theme.of(context).colorScheme.primary,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  padding: EdgeInsets.symmetric(vertical: 20, horizontal: 88),
+                ),
+                onPressed: () {
+                  ;
+                },
+                child: const Text('Đăng nhập bằng EMAIL'),
+              ),
+              const SizedBox(
+                height: 16,
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  // Foreground color
+                  onPrimary: Theme.of(context).colorScheme.onPrimary,
+                  // Background color
+                  primary: Theme.of(context).colorScheme.primary,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  padding: EdgeInsets.symmetric(vertical: 20, horizontal: 88),
+                ),
+                onPressed: () {
+                  ;
+                },
+                child: const Text('Đăng nhập bằng EMAIL'),
+              ),
+            ],
+          ),
         ),
       ),
     );

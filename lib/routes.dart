@@ -8,5 +8,5 @@ import 'more/more.dart';
 final Map<String, WidgetBuilder> routes = {
   Discover.routeName: (context) => const Discover(),
   Signin.routeName: (context) => const Signin(),
-  // More.routeName: (context) => const More(),
+  More.routeName: (context) => const More(),
 };

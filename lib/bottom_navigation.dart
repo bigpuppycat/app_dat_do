@@ -1,6 +1,6 @@
 import 'package:app_dat_do/discover/Browse.dart';
 import 'package:app_dat_do/discover/Favourite.dart';
-import 'package:app_dat_do/discover/More.dart';
+import 'more/more.dart';
 import 'package:app_dat_do/discover/discover.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -18,7 +18,7 @@ class _MyStatefulWidgetState extends State<BottomNavigation> {
     const Discover(),
     const Browse(),
     const Favourite(),
-    const More()
+    const More(),
   ];
 
   void _onItemTapped(int index) {

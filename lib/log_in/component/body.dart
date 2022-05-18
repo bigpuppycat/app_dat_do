@@ -37,10 +37,6 @@ class Body extends StatelessWidget {
                   fit: BoxFit.fill,
                 ),
               ),
-              // RaisedButton(
-              //   child: const Text("heo bé"),
-              //   onPressed: () {},
-              // )
               const SizedBox(
                 height: 16,
               ),
