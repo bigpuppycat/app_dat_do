@@ -40,10 +40,7 @@ class SectionTitle extends StatelessWidget {
         ),
         GestureDetector(
           onTap: press,
-          child: Text(
-            "See More",
-            style: TextStyle(color: Color(0xFFBBBBBB)),
-          ),
+          child: Text("Xem tất cả", style: TextStyle(color: Color(0xff3d3d3d))),
         ),
       ],
     );
