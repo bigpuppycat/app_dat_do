@@ -15,7 +15,7 @@ ThemeData theme() {
       ),
     ),
     scaffoldBackgroundColor: const Color(0xFFFCF9F2),
-    fontFamily: "roboto",
+    fontFamily: "Open Sans",
     visualDensity: VisualDensity.adaptivePlatformDensity,
   );
 }

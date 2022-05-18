@@ -11,7 +11,7 @@ class Body extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            const CardExample(),
+            // CardExample(),
             PopularProducts(),
           ],
         ),
