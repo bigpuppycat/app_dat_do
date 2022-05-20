@@ -1,41 +1,5 @@
 import 'package:flutter/material.dart';
-
-class Product {
-  final String shopavatar,
-      shopcover,
-      title,
-      title2,
-      type,
-      date,
-      price,
-      distance,
-      rate;
-  Product({
-    required this.date,
-    required this.shopcover,
-    required this.shopavatar,
-    required this.title,
-    required this.title2,
-    required this.price,
-    required this.type,
-    required this.distance,
-    required this.rate,
-  });
-}
-
-List<Product> products = [
-  Product(
-    date: "12:00-13:00",
-    shopcover: "'assets/shop-image (1)'",
-    shopavatar: "'assets/shop-image (1)'",
-    title: "Bún bò nam bộ chùa láng",
-    title2: "còn 2",
-    price: "25.000",
-    type: "đồ ăn nóng",
-    distance: "1km",
-    rate: "4.3",
-  )
-];
+import 'product_cart.dart';
 
 class CardExample extends StatelessWidget {
   final Product product;

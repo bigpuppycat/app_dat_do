@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'component/body.dart';
 
 class More extends StatelessWidget {

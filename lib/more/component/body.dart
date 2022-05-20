@@ -9,143 +9,80 @@ class Body extends StatelessWidget {
       child: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(24.0),
-          child: Expanded(
-            //cái này làm nó ra giữa
-
-            child: Align(
-              alignment: Alignment.bottomCenter,
-              child: Column(
-                // mainAxisAlignment: MainAxisAlignment.spaceBetween, hihi em muốn biến nút thành màu trắng
-
-                // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  Container(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      'more',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 36,
-                      ),
+          child: Align(
+            child: Column(
+              children: <Widget>[
+                Container(
+                  alignment: Alignment.centerLeft,
+                  child: const Text(
+                    'More',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 36,
                     ),
                   ),
-                  const SizedBox(
-                    height: 16,
-                  ),
-                  Container(
-                    alignment: Alignment.centerLeft,
-                    width: double.infinity,
-                    child: ElevatedButton(
-                      style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all<Color>(Colors.white),
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(18.0),
-                          ),
-                        ),
-                        // được chữ màu đen ko anh?
-                        //anh giup dc gi nuwa khong co
-                      ),
-                      onPressed: () {
-                        ;
-                      },
-                      child: Text(
-                        'Tài khoản',
-                        style: TextStyle(color: Colors.black),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 16,
-                  ),
-                  SizedBox(
-                    width: double.infinity,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        // Foreground color
-                        onPrimary: Theme.of(context).colorScheme.onPrimary,
-                        // Background color
-                        primary: Theme.of(context).colorScheme.primary,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                        padding: EdgeInsets.symmetric(
-                          vertical: 20,
-                        ),
-                      ),
-                      onPressed: () {},
-                      child: const Text('Đơn'),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 16,
-                  ),
-                  SizedBox(
-                    width: double.infinity,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        // Foreground color
-                        onPrimary: Theme.of(context).colorScheme.onPrimary,
-                        // Background color
-                        primary: Theme.of(context).colorScheme.primary,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                        padding: EdgeInsets.symmetric(
-                          vertical: 20,
-                        ),
-                      ),
-                      onPressed: () {
-                        ;
-                      },
-                      child: const Text('Trợ giúp'),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 16,
-                  ),
-                  SizedBox(
-                    width: double.infinity,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        // Foreground color
-                        onPrimary: Theme.of(context).colorScheme.onPrimary,
-                        // Background color
-                        primary: Theme.of(context).colorScheme.primary,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                        padding: EdgeInsets.symmetric(vertical: 20),
-                      ),
-                      onPressed: () {
-                        ;
-                      },
-                      child: const Text('Blog'),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 16,
-                  ),
-                  SizedBox(
-                    width: double.infinity,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        // Foreground color
-                        onPrimary: Theme.of(context).colorScheme.onPrimary,
-                        // Background color
-                        primary: Theme.of(context).colorScheme.primary,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                        padding: EdgeInsets.symmetric(vertical: 20),
-                      ),
-                      onPressed: () {
-                        ;
-                      },
-                      child: const Text('Điều khoản'),
-                    ),
-                  ),
-                ],
-              ),
+                ),
+                const SizedBox(
+                  height: 16,
+                ),
+                MoreBulder(title: 'Tài khoản', icon: Icons.home),
+                MoreBulder(title: 'Đơn', icon: Icons.home),
+                MoreBulder(title: 'Blog', icon: Icons.home),
+                MoreBulder(title: 'Điều khoản', icon: Icons.home),
+                MoreBulder(title: 'Hỗ trợ', icon: Icons.home),
+              ],
             ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class MoreBulder extends StatelessWidget {
+  MoreBulder({required this.title, required this.icon});
+
+  final IconData icon;
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: double.infinity,
+      height: 48,
+      child: ElevatedButton(
+        style: ButtonStyle(
+          alignment: Alignment.centerLeft,
+          backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
+          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(5.0),
+            ),
+          ),
+        ),
+        onPressed: () {
+          ;
+        },
+        child: RichText(
+          // //1 dòng có icon và text
+          text: TextSpan(
+            children: [
+              WidgetSpan(
+                child: Icon(
+                  icon,
+                  size: 24,
+                  color: Colors.black,
+                ),
+              ),
+              TextSpan(
+                text: title,
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                  fontSize: 18,
+                ),
+              ),
+            ],
           ),
         ),
       ),
