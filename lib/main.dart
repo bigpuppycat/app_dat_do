@@ -1,3 +1,4 @@
+import 'package:app_dat_do/discover/discover.dart';
 import 'package:flutter/material.dart';
 import 'routes.dart';
 import 'log_in/signin.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: theme(),
       // home: SplashScreen(),
       // We use routeName so that we dont need to remember the name
-      initialRoute: More.routeName,
+      initialRoute: Discover.routeName,
       routes: routes,
     );
   }

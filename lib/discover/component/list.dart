@@ -9,9 +9,12 @@ class Product extends StatelessWidget {
       type,
       date,
       distance,
-      rate,price;
+      rate,
+      price;
 
-  const ProductCard({Key? key, required this.date,
+  const Product({
+    Key? key,
+    required this.date,
     required this.shopcover,
     required this.shopavatar,
     required this.title,
@@ -19,11 +22,11 @@ class Product extends StatelessWidget {
     required this.price,
     required this.type,
     required this.distance,
-    required this.rate, }) : super(key: key);
+    required this.rate,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column();
   }
 }
-
