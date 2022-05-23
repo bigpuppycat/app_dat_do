@@ -7,7 +7,7 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: SingleChildScrollView(
-        child: Padding(
+        child: Container(
           padding: const EdgeInsets.all(24.0),
           child: Align(
             child: Column(
@@ -25,11 +25,14 @@ class Body extends StatelessWidget {
                 const SizedBox(
                   height: 16,
                 ),
-                MoreBulder(title: 'Tài khoản', icon: Icons.home),
-                MoreBulder(title: 'Đơn', icon: Icons.home),
-                MoreBulder(title: 'Blog', icon: Icons.home),
-                MoreBulder(title: 'Điều khoản', icon: Icons.home),
-                MoreBulder(title: 'Hỗ trợ', icon: Icons.home),
+                MoreBulder(
+                  title: 'Tài khoản',
+                  icon: Icons.account_circle,
+                ),
+                MoreBulder(title: 'Đơn', icon: Icons.list_alt),
+                MoreBulder(title: 'Hỗ trợ', icon: Icons.light_outlined),
+                MoreBulder(title: 'Blog', icon: Icons.newspaper),
+                MoreBulder(title: 'Điều khoản', icon: Icons.beenhere_outlined),
               ],
             ),
           ),
