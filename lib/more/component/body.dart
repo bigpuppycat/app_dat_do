@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 import 'menu.dart';
@@ -24,14 +26,44 @@ class Body extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
                 const Menu(),
-                Icon(
-                  Icons.shop,
-                  size: 50,
+                const SizedBox(
+                  height: 100,
                 ),
+                const Icon(
+                  Icons.store_outlined,
+                  size: 60,
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  child: const Center(
+                    child: Text(
+                      'Bạn có phải chủ cửa hàng?',
+                    ),
+                  ),
+                ),
+                Container(
+                  child: const Center(
+                    child: Text('Tham gia TooGood ngay '),
+                  ),
+                ),
+                Container(
+                  child: const Center(
+                    child: Text('để giảm đồ ăn lãng phí.'),
+                  ),
+                ),
+                TextButton.icon(
+                  onPressed: () {},
+                  // label: const Text('Tìm hiểu'),
+                  // icon: const Icon(Icons.keyboard_arrow_right),
+                  label: Icon(Icons.keyboard_arrow_right),
+                  icon: const Text('Tìm hiểu'),
+                )
               ],
             ),
           ),
