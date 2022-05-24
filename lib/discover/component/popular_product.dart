@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'card.dart';
 import 'data.dart';
-import 'detail.dart';
+import 'package:app_dat_do/detail/detail.dart';
 
 class PopularProducts extends StatelessWidget {
   const PopularProducts({
