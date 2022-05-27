@@ -10,6 +10,7 @@ class Card1 extends StatelessWidget {
       distance,
       rate,
       price;
+
   final VoidCallback press;
   const Card1({
     Key? key,
@@ -31,12 +32,12 @@ class Card1 extends StatelessWidget {
         onTap: press,
         child: Container(
           decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15),
             boxShadow: [
               BoxShadow(
-                color: Colors.grey.withOpacity(0.5),
-                spreadRadius: 5,
-                blurRadius: 7,
-                offset: const Offset(0, 3), // changes position of shadow
+                color: Colors.grey.withOpacity(0.1),
+                spreadRadius: 0.01,
+                blurRadius: 0.01,
               ),
             ],
           ),
@@ -56,26 +57,27 @@ class Card1 extends StatelessWidget {
                         child: Container(
                           height: 100.0,
                           width: 300,
-                          child: Image.asset(
-                            shopcover,
-                            fit: BoxFit.cover,
-                          ),
                           decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage(shopcover),
+                              fit: BoxFit.cover,
+                            ),
                             borderRadius: BorderRadius.circular(15),
                           ),
                         ),
                       ),
+
+                      // gradient gradient
                       Positioned(
-                        // top: 10,a
                         child: Container(
                           height: 100.0,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Colors.white,
                             gradient: LinearGradient(
                               begin: FractionalOffset.center,
                               end: FractionalOffset.bottomCenter,
                               colors: [
-                                Colors.grey.withOpacity(0),
+                                Color.fromARGB(0, 124, 124, 124),
                                 Colors.black,
                               ],
                             ),
@@ -104,7 +106,6 @@ class Card1 extends StatelessWidget {
                         right: 10.0,
                         child: Text(
                           type,
-                          // Optional params to try:
                           style: const TextStyle(
                             color: Colors.black,
                             fontSize: 12.0,
@@ -191,3 +192,5 @@ class Card1 extends StatelessWidget {
         ));
   }
 }
+
+//
