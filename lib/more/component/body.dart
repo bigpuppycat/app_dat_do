@@ -19,7 +19,7 @@ class Body extends StatelessWidget {
                     'More',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      fontSize: 36,
+                      fontSize: 30,
                     ),
                   ),
                 ),
