@@ -1,6 +1,5 @@
 import 'package:app_dat_do/bottom_navigation.dart';
 import 'package:flutter/material.dart';
-
 import 'component/body.dart';
 
 class Discover extends StatelessWidget {
