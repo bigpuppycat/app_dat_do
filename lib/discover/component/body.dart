@@ -41,7 +41,6 @@ class Body extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.only(bottom: 24),
                     child: Column(
                       // mainAxisAlignment: MainAxisAlignment.start,
                       children: <Widget>[
@@ -63,12 +62,18 @@ class Body extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 100,
+                    width: 130,
                   ),
                   ElevatedButton(
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
-                          primary: Colors.grey.shade50),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                        primary: const Color.fromARGB(33, 110, 110, 110),
+                        elevation: 0,
+                        shadowColor: Colors.transparent,
+                      ),
                       child: Text('Thay đổi',
                           style: TextStyle(
                             color: Colors.black.withOpacity(1.0),
@@ -86,3 +91,4 @@ class Body extends StatelessWidget {
 // TODO Implement this library.
 
 
+// làm gì đấy
