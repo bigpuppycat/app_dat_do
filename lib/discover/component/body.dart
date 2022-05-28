@@ -29,26 +29,31 @@ class Body extends StatelessWidget {
                 height: 10,
               ),
               Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    // alignment: crossAxisAlignment.to,
-                    // padding: EdgeInsets.only(right: 2.0),
-                    child: Icon(
-                      Icons.person_pin_circle,
-                      size: 18,
-                    ),
-                  ),
-                  Container(
                     child: Column(
-                      // mainAxisAlignment: MainAxisAlignment.start,
                       children: <Widget>[
-                        Text(
-                          'Tân Mai, Hà Nội',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
+                        RichText(
+                          text: TextSpan(
+                            children: [
+                              WidgetSpan(
+                                child: Container(
+                                  child: const Icon(
+                                    Icons.person_pin_circle,
+                                    size: 18,
+                                  ),
+                                ),
+                              ),
+                              const TextSpan(
+                                text: 'Tân Mai, Hà Nội',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                         SizedBox(height: 4),
@@ -60,9 +65,6 @@ class Body extends StatelessWidget {
                         ),
                       ],
                     ),
-                  ),
-                  SizedBox(
-                    width: 130,
                   ),
                   ElevatedButton(
                       onPressed: () {},
@@ -81,7 +83,26 @@ class Body extends StatelessWidget {
                 ],
               ),
               Row(
-                children: [],
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Gói đồ ăn gần bạn',
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900),
+                  ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Row(children: [
+                      Text(
+                        'Xem thêm',
+                        style: TextStyle(
+                          fontSize: 14,
+                          color: Color(0xFF17443f),
+                        ),
+                      ),
+                      Icon(Icons.chevron_right),
+                    ]),
+                  ),
+                ],
               ),
               PopularProducts(),
             ],
@@ -93,4 +114,4 @@ class Body extends StatelessWidget {
 }
 // TODO Implement this library.
 
-// làm gì đấy
+
