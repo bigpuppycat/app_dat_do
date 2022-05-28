@@ -9,69 +9,72 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            Container(
-              padding: EdgeInsets.only(left: 25.0),
-              alignment: Alignment.centerLeft,
-              child: const Text(
-                'Khám Phá',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 30,
+      child: Padding(
+        padding: const EdgeInsets.only(left: 18.0),
+        child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Container(
+                padding: const EdgeInsets.only(top: 10.0),
+                alignment: Alignment.centerLeft,
+                child: const Text(
+                  'Khám Phá',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 24,
+                  ),
                 ),
               ),
-            ),
-            const SizedBox(
-              height: 16,
-            ),
-            Container(
-              padding: EdgeInsets.only(
-                left: 20.0,
+              const SizedBox(
+                height: 10,
               ),
-              alignment: Alignment.centerLeft,
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: const [
-                  Padding(
-                    padding: EdgeInsets.only(right: 6.0),
-                    child: Icon(
-                      Icons.person_pin_circle,
-                      size: 18,
+              Container(
+                // padding: const EdgeInsets.only(
+                //   left: 20.0,
+                // ),
+                alignment: Alignment.centerLeft,
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(
+                      padding: EdgeInsets.only(right: 2.0, top: 0),
+                      child: Icon(
+                        Icons.person_pin_circle,
+                        size: 18,
+                      ),
                     ),
-                  ),
-                  Text(
-                    'Tân Mai, Hà Nội',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
+                    Container(
+                      padding: EdgeInsets.only(bottom: 24),
+                      child: Column(
+                        children: const <Widget>[
+                          Text(
+                            'Tân Mai, Hà Nội',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16,
+                            ),
+                          ),
+                          SizedBox(height: 4),
+                          Text(
+                            'trong vòng 5km',
+                            style: TextStyle(
+                              fontSize: 14,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    width: 200,
-                  ),
-                ], //ụt
-              ),
-            ),
-            Container(
-              padding: EdgeInsets.only(left: 35.0, bottom: 18),
-              alignment: Alignment.centerLeft,
-              child: const Text(
-                'trong vòng 5km',
-                style: TextStyle(
-                  fontSize: 14,
+                  ],
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 8.0),
-              child: PopularProducts(),
-            ),
-          ],
+              PopularProducts(),
+            ],
+          ),
         ),
       ),
     );
   }
 }
 // TODO Implement this library.
+
+
