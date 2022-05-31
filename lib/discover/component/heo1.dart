@@ -4,8 +4,8 @@ import 'card.dart';
 import 'data.dart';
 import 'package:app_dat_do/detail/detail.dart';
 
-class PopularProducts extends StatelessWidget {
-  const PopularProducts({
+class heo1 extends StatelessWidget {
+  const heo1({
     Key? key,
   }) : super(key: key);
 
@@ -14,7 +14,7 @@ class PopularProducts extends StatelessWidget {
     return Column(
       children: [
         SectionTitle(
-          head1: "Popular",
+          head1: "heo1",
         ),
         SingleChildScrollView(
           physics: const BouncingScrollPhysics(

@@ -3,11 +3,9 @@ import 'package:flutter/material.dart';
 class SectionTitle extends StatelessWidget {
   const SectionTitle({
     Key? key,
-    required this.title,
-    required this.pressSeeAll,
+    required this.head1,
   }) : super(key: key);
-  final String title;
-  final VoidCallback pressSeeAll;
+  final String head1;
 
   @override
   Widget build(BuildContext context) {
@@ -15,11 +13,11 @@ class SectionTitle extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          title,
+          head1,
           style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900),
         ),
         TextButton(
-          onPressed: pressSeeAll,
+          onPressed: () {},
           child: Row(children: [
             Text(
               'Xem thêm',
