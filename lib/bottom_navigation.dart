@@ -1,4 +1,4 @@
-import 'package:app_dat_do/discover/Browse.dart';
+import 'package:app_dat_do/browser/Browse.dart';
 import 'package:app_dat_do/discover/Favourite.dart';
 import 'more/more.dart';
 import 'package:app_dat_do/discover/discover.dart';

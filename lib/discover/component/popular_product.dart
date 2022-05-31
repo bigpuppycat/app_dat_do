@@ -1,3 +1,4 @@
+import 'package:app_dat_do/discover/component/section_title.dart';
 import 'package:flutter/material.dart';
 import 'card.dart';
 import 'data.dart';
@@ -12,6 +13,10 @@ class PopularProducts extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        SectionTitle(
+          title: "Popular",
+          pressSeeAll: () {},
+        ),
         SingleChildScrollView(
           physics: const BouncingScrollPhysics(
               parent: AlwaysScrollableScrollPhysics()),

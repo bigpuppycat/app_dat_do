@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'browser/Browse.dart';
 import 'discover/discover.dart';
 import 'log_in/signin.dart';
 import 'more/more.dart';
@@ -9,4 +10,5 @@ final Map<String, WidgetBuilder> routes = {
   Discover.routeName: (context) => const Discover(),
   Signin.routeName: (context) => const Signin(),
   More.routeName: (context) => const More(),
+  Browse.routeName: (context) => const Browse(),
 };

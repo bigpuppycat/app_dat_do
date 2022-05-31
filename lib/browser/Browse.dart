@@ -1,14 +1,18 @@
 import 'package:app_dat_do/bottom_navigation.dart';
 import 'package:flutter/material.dart';
+import 'component/body.dart';
 
 class Browse extends StatelessWidget {
-  static String routeName = "/home";
+  static String routeName = "/browse";
 
-  const Browse({Key? key}) : super(key: key);
+  const Browse({
+    Key? key,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
+      body: Body(),
       bottomNavigationBar: const BottomNavigation(),
     );
   }
