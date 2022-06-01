@@ -1,4 +1,9 @@
+import 'package:app_dat_do/browser/component/popular_product.dart';
+import 'package:app_dat_do/browser/component/two_button.dart';
+import 'package:app_dat_do/browser/component/user_address.dart';
 import 'package:flutter/material.dart';
+
+import 'sorted_by_setting.dart';
 
 class Body extends StatelessWidget {
   const Body({
@@ -12,7 +17,19 @@ class Body extends StatelessWidget {
         padding: const EdgeInsets.symmetric(vertical: 18.0, horizontal: 18),
         child: SingleChildScrollView(
           child: Column(
-            children: <Widget>[],
+            children: <Widget>[
+              Container(
+                padding: const EdgeInsets.only(top: 10, bottom: 10),
+                alignment: Alignment.centerLeft,
+                child: const Text(
+                  'Tìm kiếm',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+                ),
+              ),
+              YourPlace(),
+              // TwoButton(),
+              YourProduct(),
+            ],
           ),
         ),
       ),
