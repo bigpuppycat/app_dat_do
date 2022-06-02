@@ -88,7 +88,32 @@ class Body extends StatelessWidget {
           ),
           Container(
             child: Column(
-              children: [],
+              children: [
+                Text(
+                  'phuong dien di',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 24,
+                  ),
+                ),
+                Text(
+                  'phuong dien di',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 24,
+                  ),
+                ),
+                Text(
+                  'phuong dien di',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 24,
+                  ),
+                ),
+              ],
             ),
           ),
         ],
