@@ -17,12 +17,12 @@ class Menu extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           child: Column(
             children: List.generate(
-              Builders.length,
+              builders.length,
               (index) => SizedBox(
                 child: Button1(
-                  title: Builders[index].title,
-                  icon: Builders[index].icon,
-                  onPress: Builders[index].onPress,
+                  title: builders[index].title,
+                  icon: builders[index].icon,
+                  onPress: builders[index].onPress,
                 ),
               ),
             ),

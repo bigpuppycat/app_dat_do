@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'list.dart';
 
-List<MoreBuilder> Builders = [
+List<MoreBuilder> builders = [
   MoreBuilder(title: 'Tài khoản', icon: Icons.account_circle, onPress: ''),
   MoreBuilder(
     title: 'Đơn',
