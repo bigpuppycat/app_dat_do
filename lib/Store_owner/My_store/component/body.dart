@@ -44,20 +44,54 @@ class Body extends StatelessWidget {
                     primary: Colors.teal.shade900,
                   ),
                   onPressed: () {},
-                  child: Row(
+                  child: Column(
                     children: [
-                      Icon(
-                        Icons.light_mode,
-                        color: Colors.white,
-                        size: 24.0,
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.light_mode,
+                            color: Colors.white,
+                            size: 24.0,
+                          ),
+                          Text('Chỉ dẫn nhanh', style: TextStyle(fontSize: 18)),
+                          Spacer(),
+                        ],
                       ),
-                      Text('Chỉ dẫn nhanh', style: TextStyle(fontSize: 18)),
-                      Text('để tham gia TooGood'),
                     ],
                   )),
             ),
           ),
-          Text('set up your account(0/5)'),
+          const Text('set up your account(0/5)'),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(6),
+                side: const BorderSide(
+                  color: Color.fromARGB(255, 36, 82, 38),
+                  width: 1,
+                ),
+              ),
+              primary: Colors.white,
+            ),
+            onPressed: () {},
+            child: Expanded(
+              child: Row(children: const [
+                Icon(
+                  Icons.add_circle_outline,
+                  color: Colors.black,
+                  size: 24.0,
+                ),
+                Text(
+                  'Thêm miêu tả về cửa hàng của bạn',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
+              ]),
+            ),
+          ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               shape: RoundedRectangleBorder(
@@ -70,25 +104,60 @@ class Body extends StatelessWidget {
               primary: Colors.white,
             ),
             onPressed: () {},
-            child: Row(children: [
-              Icon(
-                Icons.light_mode,
-                color: Colors.black,
-                size: 24.0,
-              ),
-              Text(
-                'dien gi day di?',
-                style: TextStyle(
+            child: Expanded(
+              child: Row(children: [
+                Icon(
+                  Icons.add_circle_outline,
                   color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 24,
+                  size: 24.0,
                 ),
-              ),
-            ]),
+                Text(
+                  'Thêm thông tin về gói đồ của bạn',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
+              ]),
+            ),
           ),
           Container(
             child: Column(
-              children: [],
+              children: [
+                Text(
+                  'Thêm thông tin về gói đồ của bạn',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
+                Text(
+                  'Cài đặt lặp lại đơn hàng tuần',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
+                Text(
+                  'Học cách để gửi đi những phần thức ăn đến hạn',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
+                Text(
+                  'Hoàn thành bước cuối của tài khoản nhé',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
+              ],
             ),
           ),
         ],
