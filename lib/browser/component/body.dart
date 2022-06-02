@@ -1,9 +1,9 @@
 import 'package:app_dat_do/browser/component/popular_product.dart';
-import 'package:app_dat_do/browser/component/two_button.dart';
+import 'package:app_dat_do/browser/component/twobutton.dart';
 import 'package:app_dat_do/browser/component/user_address.dart';
 import 'package:flutter/material.dart';
 
-import 'sorted_by_setting.dart';
+import 'menu.dart';
 
 class Body extends StatelessWidget {
   const Body({
@@ -27,7 +27,8 @@ class Body extends StatelessWidget {
                 ),
               ),
               YourPlace(),
-              // TwoButton(),
+              TwoButton(),
+              Section(),
               YourProduct(),
             ],
           ),

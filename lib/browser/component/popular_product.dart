@@ -12,7 +12,7 @@ class YourProduct extends StatelessWidget {
     return Column(
       children: [
         SingleChildScrollView(
-          physics: const BouncingScrollPhysics(
+          physics: const NeverScrollableScrollPhysics(
               parent: AlwaysScrollableScrollPhysics()),
           scrollDirection: Axis.vertical,
           child: Column(

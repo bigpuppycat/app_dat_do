@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class Card1 extends StatelessWidget {
@@ -31,6 +33,7 @@ class Card1 extends StatelessWidget {
     return GestureDetector(
         onTap: press,
         child: Container(
+          padding: const EdgeInsets.symmetric(vertical: 4),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
             boxShadow: [
@@ -50,13 +53,13 @@ class Card1 extends StatelessWidget {
               children: <Widget>[
                 SizedBox(
                   height: 180.0,
-                  width: 280.0,
+                  width: double.infinity,
                   child: Stack(
                     children: <Widget>[
                       Positioned(
                         child: Container(
                           height: 100.0,
-                          width: 300,
+                          // width: 300,
                           decoration: BoxDecoration(
                             image: DecorationImage(
                               image: AssetImage(shopcover),
