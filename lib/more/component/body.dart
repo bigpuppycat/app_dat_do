@@ -37,28 +37,22 @@ class Body extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                Container(
-                  child: const Center(
-                    child: Text(
-                      'Bạn có phải chủ cửa hàng?',
-                    ),
+                const Center(
+                  child: Text(
+                    'Bạn có phải chủ cửa hàng?',
                   ),
                 ),
-                Container(
-                  child: const Center(
-                    child: Text('Tham gia TooGood ngay '),
-                  ),
+                const Center(
+                  child: Text('Tham gia TooGood ngay '),
                 ),
-                Container(
-                  child: const Center(
-                    child: Text('để giảm đồ ăn lãng phí.'),
-                  ),
+                const Center(
+                  child: Text('để giảm đồ ăn lãng phí.'),
                 ),
                 TextButton.icon(
                   onPressed: () {},
                   // label: const Text('Tìm hiểu'),
                   // icon: const Icon(Icons.keyboard_arrow_right),
-                  label: Icon(Icons.keyboard_arrow_right),
+                  label: const Icon(Icons.keyboard_arrow_right),
                   icon: const Text('Tìm hiểu'),
                 )
               ],

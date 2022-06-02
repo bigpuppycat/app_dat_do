@@ -12,7 +12,7 @@ class Discover extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Body(),
+      body: const Body(),
       bottomNavigationBar: const BottomNavigation(),
     );
   }

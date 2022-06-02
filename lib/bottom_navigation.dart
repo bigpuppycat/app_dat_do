@@ -1,5 +1,5 @@
 import 'package:app_dat_do/browser/Browse.dart';
-import 'package:app_dat_do/discover/Favourite.dart';
+import 'package:app_dat_do/favourite/favourite.dart';
 import 'more/more.dart';
 import 'package:app_dat_do/discover/discover.dart';
 import 'package:flutter/material.dart';
