@@ -11,6 +11,7 @@ class Body extends StatelessWidget {
     return SingleChildScrollView(
       padding: const EdgeInsets.all(18.0),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Container(
             // alignment: AlignmentGeometry(),

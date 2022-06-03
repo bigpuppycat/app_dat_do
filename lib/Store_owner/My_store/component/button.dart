@@ -42,7 +42,7 @@ class ButtonBuilder extends StatelessWidget {
             Column(children: [
               Container(
                 alignment: Alignment.centerLeft,
-                width: 230,
+                width: 240,
                 child: Text(
                   title,
                   maxLines: 2,
@@ -56,7 +56,7 @@ class ButtonBuilder extends StatelessWidget {
               ),
               Container(
                   alignment: Alignment.centerLeft,
-                  width: 230,
+                  width: 240,
                   child: Text(
                     subtitle,
                     maxLines: 2,
