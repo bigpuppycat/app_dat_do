@@ -11,14 +11,15 @@ class Mystore extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
           toolbarHeight: 70,
           elevation: 5,
-          backgroundColor: const Color(0xFFFCF9F2),
+          backgroundColor: Colors.white,
           leading: IconButton(
             onPressed: () {},
             icon: Icon(
-              Icons.home,
+              Icons.menu,
               color: Colors.black,
             ),
           ),
@@ -26,7 +27,7 @@ class Mystore extends StatelessWidget {
             IconButton(
               onPressed: () {},
               icon: Icon(
-                Icons.call,
+                Icons.notifications_outlined,
                 color: Colors.black,
               ),
             ),
