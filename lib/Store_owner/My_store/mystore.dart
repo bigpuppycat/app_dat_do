@@ -28,7 +28,7 @@ class Mystore extends StatelessWidget {
               onPressed: () {},
               icon: Icon(
                 Icons.notifications_outlined,
-                color: Colors.black,
+                color: Colors.black54,
               ),
             ),
           ]),

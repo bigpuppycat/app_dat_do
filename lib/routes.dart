@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'Store_owner/My_store/mystore.dart';
+import 'Store_owner/detail/detail.dart';
 import 'browser/Browse.dart';
 import 'discover/discover.dart';
 import 'log_in/signin.dart';
@@ -13,4 +14,5 @@ final Map<String, WidgetBuilder> routes = {
   More.routeName: (context) => const More(),
   Browse.routeName: (context) => const Browse(),
   Mystore.routeName: (context) => const Mystore(),
+  Detail.routeName: (context) => const Detail(),
 };

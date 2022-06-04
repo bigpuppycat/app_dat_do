@@ -1,5 +1,6 @@
 import 'package:app_dat_do/discover/discover.dart';
 import 'package:flutter/material.dart';
+import 'Store_owner/detail/detail.dart';
 import 'routes.dart';
 import 'log_in/signin.dart';
 import 'theme.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       theme: theme(),
       // home: SplashScreen(),
       // We use routeName so that we dont need to remember the name
-      initialRoute: Mystore.routeName,
+      initialRoute: Detail.routeName,
       routes: routes,
     );
   }

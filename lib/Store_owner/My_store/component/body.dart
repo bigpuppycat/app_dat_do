@@ -1,4 +1,5 @@
 import 'package:app_dat_do/Store_owner/My_store/component/button.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Body extends StatelessWidget {
@@ -9,7 +10,7 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      padding: const EdgeInsets.all(18.0),
+      padding: const EdgeInsets.symmetric(horizontal: 18.0, vertical: 32),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -17,11 +18,13 @@ class Body extends StatelessWidget {
             // alignment: AlignmentGeometry(),
             padding: EdgeInsets.all(16),
             decoration: BoxDecoration(
-                border: Border.all(width: 1),
+                border: Border.all(width: 1, color: Colors.black45),
                 borderRadius: BorderRadius.circular(6)),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
                     Text(
                       'Chào mừng bạn tới GoodStore - chỉ còn vài bước để tham gia!',
@@ -32,7 +35,7 @@ class Body extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.symmetric(vertical: 14.0),
+                      padding: EdgeInsets.only(top: 10.0, bottom: 18),
                       child: Text(
                         'Tài khoản của bạn đã được tạo thành công. Đây là vài điều bạn có thể làm ngay để bắt đầu bảo vệ thức ăn cùng TooGood',
                         style: TextStyle(
@@ -54,7 +57,8 @@ class Body extends StatelessWidget {
                       child: Row(
                         children: [
                           const Padding(
-                            padding: const EdgeInsets.only(right: 14.0),
+                            padding:
+                                const EdgeInsets.only(right: 20.0, left: 6),
                             child: Icon(
                               Icons.lightbulb_outlined,
                               color: Colors.white,
@@ -66,11 +70,16 @@ class Body extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: const [
                               Text('Chỉ dẫn nhanh cho',
-                                  style: TextStyle(fontSize: 20)),
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold)),
                               SizedBox(
-                                width: 14,
+                                height: 4,
                               ),
-                              Text('TooGood', style: TextStyle(fontSize: 18))
+                              Text('TooGood',
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold))
                             ],
                           ),
                         ],
@@ -79,8 +88,8 @@ class Body extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 8.0),
-                  child: const Text('set up your account(0/5)'),
+                  padding: EdgeInsets.symmetric(vertical: 8.0),
+                  child: Text('set up your account(0/5)'),
                 ),
                 ButtonBuilder(
                     title: 'Thêm miêu tả về cửa hàng của bạn',
@@ -116,17 +125,41 @@ class Body extends StatelessWidget {
               width: double.infinity,
               padding: EdgeInsets.all(16),
               decoration: BoxDecoration(
-                  border: Border.all(width: 1),
+                  border: Border.all(width: 1, color: Colors.black45),
                   borderRadius: BorderRadius.circular(6)),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Chúng tôi sẽ sớm liên lạc lại',
+                    'Bạn sẽ sớm nhận được tin từ chúng tôi',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 22,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 12,
                   ),
                   Text(
-                      'Chúng tôi sẽ liên lạc lại với bạn sau vài ngày để xác nhận thông tin của bạn và giúp bạn bắt đầu.'),
+                    'Chúng tôi sẽ liên lạc lại với bạn sau vài ngày để xác nhận thông tin của bạn và giúp bạn bắt đầu.',
+                    style: TextStyle(
+                      color: Colors.black,
+                      // fontWeight: FontWeight.bold,
+                      fontSize: 14,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 12,
+                  ),
                   Text(
-                      'Bạn đã sẵn sàng xuất diện trên TooGood? Liên lạc với chúng tôi 0963923072 '),
+                    'Bạn đã sẵn sàng xuất diện trên TooGood? Liên lạc với chúng tôi 0963923072 ',
+                    style: TextStyle(
+                      color: Colors.black,
+                      // fontWeight: FontWeight.w500,
+                      fontSize: 14,
+                    ),
+                  ),
                 ],
               ))
         ],
