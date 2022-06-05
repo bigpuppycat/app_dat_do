@@ -1,5 +1,7 @@
-import 'package:app_dat_do/Store_owner/detail/component/button.dart';
+import 'package:app_dat_do/Store_owner/detail/component/button1.dart';
 import 'package:flutter/material.dart';
+
+import 'button2.dart';
 
 class Body extends StatelessWidget {
   const Body({
@@ -15,19 +17,25 @@ class Body extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Text(
-            'Nhập thông tin cửa hàng của bạn',
-            style: TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: 24,
+          Padding(
+            padding: const EdgeInsets.only(top: 8.0, bottom: 14),
+            child: Text(
+              'Nhập thông tin cửa hàng của bạn',
+              style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontSize: 22,
+              ),
             ),
           ),
-          Text(
-            'Kể chúng tôi nghe một chút về cửa hàng của bạn để chúng tôi giúp bạn mở tài khoản',
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 16,
+          Padding(
+            padding: const EdgeInsets.only(bottom: 24.0),
+            child: Text(
+              'Kể chúng tôi nghe một chút về cửa hàng của bạn để chúng tôi giúp bạn mở tài khoản',
+              style: TextStyle(
+                color: Colors.black87,
+                fontSize: 16,
+              ),
             ),
           ),
           Text(
@@ -38,36 +46,44 @@ class Body extends StatelessWidget {
               fontSize: 24,
             ),
           ),
-          Text(
-            'Lưu ý xác nhận hoặc viết chính xác tên cửa hàng và địa chỉ của bạn ',
-            style: TextStyle(
-              color: Colors.black,
-              fontSize: 16,
+          Padding(
+            padding: const EdgeInsets.only(top: 8.0, bottom: 18),
+            child: Text(
+              'Lưu ý xác nhận hoặc viết chính xác tên cửa hàng và địa chỉ của bạn ',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 16,
+              ),
             ),
           ),
           Container(
             // alignment: AlignmentGeometry(),
             // padding: EdgeInsets.all(16),
             decoration: BoxDecoration(
-                border: Border.all(width: 1),
+                border: Border.all(
+                  width: 1,
+                  color: Colors.black45,
+                ),
                 borderRadius: BorderRadius.circular(6)),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
                     height: 100.0,
-                    // width: 300,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(6),
+                          topRight: Radius.circular(6)),
                       image: DecorationImage(
                         image: AssetImage("assets/image/shop-image (1).jpeg"),
                         fit: BoxFit.cover,
                       ),
                     )),
-                ButtonBuilder(
+                ButtonBuilder1(
                     title: 'Thêm miêu tả về cửa hàng của bạn',
                     subtitle: 'Kể một chút về cửa hàng của bạn',
                     onPress: () {}),
-                ButtonBuilder(
+                ButtonBuilder1(
                     title: 'Thêm thông tin gói đồ ăn',
                     subtitle:
                         'Kể một chút về gói đồ ăn của cửa hàng bạn cung cấp',
@@ -75,45 +91,69 @@ class Body extends StatelessWidget {
               ],
             ),
           ),
-          Text(
-            'Chúng tôi sẽ liên lạc lại với bạn sau vài ngày để xác nhận thông tin của bạn và giúp bạn bắt đầu.',
-            style: TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: 24,
+          Padding(
+            padding: const EdgeInsets.only(bottom: 12.0, top: 24),
+            child: Text(
+              'Loại cửa hàng',
+              style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                fontSize: 24,
+              ),
             ),
           ),
-          Text(
-            'Bạn đã sẵn sàng xuất diện trên TooGood? Liên lạc với chúng tôi 0963923072 ',
-            style: TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.bold,
-              fontSize: 24,
+          Padding(
+            padding: const EdgeInsets.only(bottom: 8.0),
+            child: Text(
+              'Chọn loại cửa hàng miêu tả bạn tốt nhất ',
+              style: TextStyle(
+                color: Colors.black87,
+                fontSize: 16,
+              ),
             ),
           ),
-          ButtonBuilder(
-              title: 'Thêm miêu tả về cửa hàng của bạn',
-              subtitle: 'Kể một chút về cửa hàng của bạn',
+          ButtonBuilder2(
+              title: 'nhà ăn',
+              // subtitle: 'Kể một chút về cửa hàng của bạn',
               onPress: () {}),
-          ButtonBuilder(
-              title: 'Thêm thông tin gói đồ ăn',
-              subtitle: 'Kể một chút về gói đồ ăn của cửa hàng bạn cung cấp',
+          ButtonBuilder2(
+              title: 'quán Caffe',
+              // subtitle: 'Kể một chút về gói đồ ăn của cửa hàng bạn cung cấp',
               onPress: () {}),
-          ButtonBuilder(
-              title: 'Cài đặt lặp lại gói đồ ăn hàng tuần',
-              subtitle:
-                  'Tạo lịch lặp lại mỗi tuần cho các buổi sẽ có đồ ăn thừa',
+          ButtonBuilder2(
+              title: 'Buffet',
+              // subtitle:
+              //     'Tạo lịch lặp lại mỗi tuần cho các buổi sẽ có đồ ăn thừa',
               onPress: () {}),
-          ButtonBuilder(
-              title: 'Học cách để gửi đi những phần thức ăn đến hạn',
-              subtitle:
-                  'Mọi điều bạn cần biết về việc chuận bị gói TooGood bất ngờ',
-              onPress: () {}),
-          ButtonBuilder(
-              title: 'Hoàn thành bước cuối cùng của tài khoản nhé',
-              subtitle:
-                  'Xác nhận thông tin cuối và bạn sẽ sẵn sàng để gia nhập cuộc chiến chống lại đồ ăn lãng phí',
-              onPress: () {}),
+          ButtonBuilder2(
+              title: 'Nhà hàng chỉ bán mang đi Takeout ', onPress: () {}),
+          ButtonBuilder2(title: 'Hotel', onPress: () {}),
+          ButtonBuilder2(title: 'Cửa hàng bánh', onPress: () {}),
+          ButtonBuilder2(title: 'Bánh mỳ', onPress: () {}),
+          ButtonBuilder2(title: 'Nước uống', onPress: () {}),
+          ButtonBuilder2(title: 'Thịt', onPress: () {}),
+          ButtonBuilder2(title: 'Rau củ quả', onPress: () {}),
+          ButtonBuilder2(title: 'khác', onPress: () {}),
+          Center(
+            child: Container(
+              child: Container(
+                width: double.infinity,
+                child: ElevatedButton(
+                    child: Text("Lưu thông tin".toUpperCase(),
+                        style: TextStyle(fontSize: 14)),
+                    style: ButtonStyle(
+                        // padding: Padding(padding: padding),
+                        backgroundColor: MaterialStateProperty.all<Color>(
+                            Color.fromARGB(12, 0, 0, 0)),
+                        shape:
+                            MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                        ))),
+                    onPressed: () => null),
+              ),
+            ),
+          )
         ],
       ),
     ));

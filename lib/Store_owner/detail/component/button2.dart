@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class ButtonBuilder extends StatelessWidget {
+class ButtonBuilder2 extends StatelessWidget {
   final String title;
-  final String subtitle;
+  // final String subtitle;
   final dynamic onPress;
 
-  const ButtonBuilder(
+  const ButtonBuilder2(
       {Key? key,
       required this.title,
-      required this.subtitle,
+      // required this.subtitle,
       required this.onPress})
       : super(key: key);
 
@@ -30,44 +30,44 @@ class ButtonBuilder extends StatelessWidget {
         onPressed: onPress,
         child: Row(
           children: [
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(vertical: 12.0, horizontal: 8),
+              child: const Icon(
+                Icons.circle_outlined,
+                color: Colors.black,
+                size: 24.0,
+              ),
+            ),
             Column(children: [
               Container(
                 alignment: Alignment.centerLeft,
-                width: 300,
+                width: 240,
                 child: Text(
                   title,
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
                     color: Colors.black,
-                    fontWeight: FontWeight.bold,
+                    // fontWeight: FontWeight.bold,
                     fontSize: 16,
                   ),
                 ),
               ),
-              Container(
-                  alignment: Alignment.centerLeft,
-                  width: 300,
-                  child: Text(
-                    subtitle,
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(
-                      color: Colors.black54,
-                      fontWeight: FontWeight.w400,
-                      fontSize: 16,
-                    ),
-                  )),
+              //   Container(
+              //       alignment: Alignment.centerLeft,
+              //       width: 240,
+              //       child: Text(
+              //         subtitle,
+              //         maxLines: 2,
+              //         overflow: TextOverflow.ellipsis,
+              //         style: const TextStyle(
+              //           color: Colors.black54,
+              //           fontWeight: FontWeight.w400,
+              //           fontSize: 16,
+              //         ),
+              //       )),
             ]),
-            Padding(
-              padding:
-                  const EdgeInsets.symmetric(vertical: 12.0, horizontal: 8),
-              child: const Icon(
-                Icons.add_circle_outline,
-                color: Colors.black,
-                size: 24.0,
-              ),
-            ),
           ],
         ),
       ),
