@@ -12,19 +12,7 @@ class Detail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
-        appBar: AppBar(
-            toolbarHeight: 70,
-            elevation: 5,
-            backgroundColor: Colors.white,
-            actions: [
-              IconButton(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.notifications_outlined,
-                  color: Colors.black,
-                ),
-              ),
-            ]),
+        appBar: AppBar(),
         //đỉnh quá coos len nao letsquáquá
         body: const Body(),
         bottomNavigationBar: const BottomNavigationmystore());
