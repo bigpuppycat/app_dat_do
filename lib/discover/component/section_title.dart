@@ -11,6 +11,7 @@ class SectionTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      // crossAxisAlignment: ,
       children: [
         Text(
           head1,

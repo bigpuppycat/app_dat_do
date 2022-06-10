@@ -10,11 +10,11 @@ class DetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.only(left: 8.0),
+        padding: const EdgeInsets.only(left: 8.0, bottom: 18),
         child: Column(
           children: <Widget>[
             SizedBox(
-              height: 180.0,
+              height: 300.0,
               width: 280.0,
               child: Stack(
                 children: <Widget>[

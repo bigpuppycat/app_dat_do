@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'component/body.dart';
 
-class More extends StatelessWidget {
-  static String routeName = "/more";
+class OwnerMore extends StatelessWidget {
+  static String routeName = "/ownermore";
 
-  const More({Key? key}) : super(key: key);
+  const OwnerMore({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

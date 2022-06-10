@@ -47,20 +47,26 @@ class YourPlace extends StatelessWidget {
             ],
           ),
         ),
-        ElevatedButton(
-            onPressed: () {},
-            style: ElevatedButton.styleFrom(
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15),
+        Padding(
+          padding: const EdgeInsets.only(right: 10.0),
+          child: ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                fixedSize: const Size(80, 0),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                primary: Color.fromARGB(54, 108, 108, 108),
+                elevation: 0,
+                shadowColor: Colors.transparent,
               ),
-              primary: const Color.fromARGB(11, 108, 108, 108),
-              elevation: 0,
-              shadowColor: Colors.transparent,
-            ),
-            child: Text('Thay đổi',
-                style: TextStyle(
-                  color: Colors.black.withOpacity(1.0),
-                ))),
+              child: Text('Thay đổi',
+                  style: TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w300,
+                    color: Colors.black12.withOpacity(1.0),
+                  ))),
+        ),
       ],
     );
   }

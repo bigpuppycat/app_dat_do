@@ -16,7 +16,7 @@ class Button1 extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(6),
       width: 350,
-      height: 48,
+      height: 60,
       child: ElevatedButton.icon(
         // style: ,
         icon: Icon(
