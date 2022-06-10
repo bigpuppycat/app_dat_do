@@ -26,7 +26,7 @@ class Button1 extends StatelessWidget {
         ),
         label: Text(
           title,
-          style: TextStyle(
+          style: const TextStyle(
             fontWeight: FontWeight.bold,
             color: Colors.black,
             fontSize: 18,

@@ -37,7 +37,7 @@ class _MyStatefulWidgetState extends State<BottomNavigationmystore> {
             ),
           ),
           icon: Padding(
-            padding: EdgeInsets.only(bottom: 8, top: 8),
+            padding: const EdgeInsets.only(bottom: 8, top: 8),
             child: SvgPicture.asset(
               "assets/store.svg",
               height: 24,
@@ -49,7 +49,7 @@ class _MyStatefulWidgetState extends State<BottomNavigationmystore> {
         ),
         BottomNavigationBarItem(
           activeIcon: Padding(
-            padding: EdgeInsets.only(bottom: 8, top: 8),
+            padding: const EdgeInsets.only(bottom: 8, top: 8),
             child: SvgPicture.asset(
               "assets/more.svg",
               height: 24,
@@ -57,7 +57,7 @@ class _MyStatefulWidgetState extends State<BottomNavigationmystore> {
             ),
           ),
           icon: Padding(
-            padding: EdgeInsets.only(bottom: 8, top: 8),
+            padding: const EdgeInsets.only(bottom: 8, top: 8),
             child: SvgPicture.asset(
               "assets/more.svg",
               height: 24,

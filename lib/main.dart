@@ -1,12 +1,9 @@
-import 'package:app_dat_do/discover/discover.dart';
 import 'package:flutter/material.dart';
-import 'Store_owner/detail/detail.dart';
+
+import 'bottom_navigation.dart';
 import 'routes.dart';
-import 'log_in/signin.dart';
+
 import 'theme.dart';
-import 'more/more.dart';
-import 'browser/Browse.dart';
-import 'Store_owner/My_store/mystore.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: theme(),
       // home: SplashScreen(),
       // We use routeName so that we dont need to remember the name
-      initialRoute: Detail.routeName,
+      initialRoute: BottomNavigation.routeName,
       routes: routes,
     );
   }

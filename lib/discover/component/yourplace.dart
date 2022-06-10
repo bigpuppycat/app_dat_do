@@ -11,20 +11,22 @@ class YourPlace extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Container(
+          padding: const EdgeInsets.only(left: 8),
+          // anh bi freez oi :)) khong biet sai dau
+          // bị đóng băng oe uh freeze o trang dau luon
+// khó xử ghê
           child: Column(
             children: <Widget>[
               RichText(
-                text: TextSpan(
+                text: const TextSpan(
                   children: [
                     WidgetSpan(
-                      child: Container(
-                        child: const Icon(
-                          Icons.person_pin_circle,
-                          size: 18,
-                        ),
+                      child: Icon(
+                        Icons.person_pin_circle,
+                        size: 18,
                       ),
                     ),
-                    const TextSpan(
+                    TextSpan(
                       text: 'Tân Mai, Hà Nội',
                       style: TextStyle(
                         color: Colors.black,
@@ -35,8 +37,8 @@ class YourPlace extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 4),
-              Text(
+              const SizedBox(height: 4),
+              const Text(
                 'trong vòng 5km',
                 style: TextStyle(
                   fontSize: 12,
@@ -51,7 +53,7 @@ class YourPlace extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(15),
               ),
-              primary: const Color.fromARGB(33, 110, 110, 110),
+              primary: const Color.fromARGB(11, 108, 108, 108),
               elevation: 0,
               shadowColor: Colors.transparent,
             ),

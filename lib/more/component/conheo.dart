@@ -24,24 +24,24 @@ class Body extends StatelessWidget {
               const SizedBox(
                 height: 16,
               ),
-              MoreBulder(
+              const MoreBulder(
                   title: 'Tài khoản', icon: Icons.account_circle, onPress: ''),
-              MoreBulder(
+              const MoreBulder(
                 title: 'Đơn',
                 icon: Icons.receipt,
                 onPress: '',
               ),
-              MoreBulder(
+              const MoreBulder(
                 title: 'Blog',
                 icon: Icons.newspaper,
                 onPress: '',
               ),
-              MoreBulder(
+              const MoreBulder(
                 title: 'Hỗ trợ',
                 icon: Icons.call,
                 onPress: '',
               ),
-              MoreBulder(
+              const MoreBulder(
                 title: 'Điều khoản',
                 icon: Icons.beenhere_outlined,
                 onPress: '',
@@ -55,7 +55,12 @@ class Body extends StatelessWidget {
 }
 
 class MoreBulder extends StatelessWidget {
-  MoreBulder({required this.title, required this.icon, required this.onPress});
+  const MoreBulder(
+      {Key? key,
+      required this.title,
+      required this.icon,
+      required this.onPress})
+      : super(key: key);
 
   final IconData icon;
   final String title;

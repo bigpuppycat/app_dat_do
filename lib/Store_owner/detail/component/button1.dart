@@ -47,9 +47,9 @@ class ButtonBuilder1 extends StatelessWidget {
                   ),
                 )),
           ]),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 8),
-            child: const Icon(
+          const Padding(
+            padding: EdgeInsets.symmetric(vertical: 12.0, horizontal: 8),
+            child: Icon(
               Icons.edit,
               color: Colors.black,
               size: 24.0,

@@ -1,5 +1,4 @@
 import 'package:app_dat_do/Store_owner/My_store/component/button.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Body extends StatelessWidget {
@@ -16,7 +15,7 @@ class Body extends StatelessWidget {
         children: [
           Container(
             // alignment: AlignmentGeometry(),
-            padding: EdgeInsets.all(16),
+            padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
                 border: Border.all(width: 1, color: Colors.black45),
                 borderRadius: BorderRadius.circular(6)),
@@ -57,8 +56,7 @@ class Body extends StatelessWidget {
                       child: Row(
                         children: [
                           const Padding(
-                            padding:
-                                const EdgeInsets.only(right: 20.0, left: 6),
+                            padding: EdgeInsets.only(right: 20.0, left: 6),
                             child: Icon(
                               Icons.lightbulb_outlined,
                               color: Colors.white,
@@ -87,7 +85,7 @@ class Body extends StatelessWidget {
                     ),
                   ),
                 ),
-                Padding(
+                const Padding(
                   padding: EdgeInsets.symmetric(vertical: 8.0),
                   child: Text('set up your account(0/5)'),
                 ),
@@ -118,18 +116,18 @@ class Body extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Container(
               width: double.infinity,
-              padding: EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
                   border: Border.all(width: 1, color: Colors.black45),
                   borderRadius: BorderRadius.circular(6)),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                children: const [
                   Text(
                     'Bạn sẽ sớm nhận được tin từ chúng tôi',
                     style: TextStyle(

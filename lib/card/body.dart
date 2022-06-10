@@ -9,7 +9,7 @@ class Body extends StatelessWidget {
       child: Stack(
         children: <Widget>[
           Positioned(
-            child: Container(
+            child: SizedBox(
               width: 200,
               child: Image.asset(
                 'assets/image-shop/shop-image (4).jpeg',
@@ -18,7 +18,7 @@ class Body extends StatelessWidget {
             ),
           ),
 
-          Positioned(
+          const Positioned(
               child: Icon(
             Icons.arrow_back,
           )),

@@ -13,7 +13,7 @@ class PopularProducts extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SectionTitle(
+        const SectionTitle(
           head1: "Popular",
         ),
         SingleChildScrollView(

@@ -2,7 +2,7 @@
 import 'list.dart';
 
 List<Product> products = [
-  Product(
+  const Product(
     date: "12:00-13:00",
     shopcover: "assets/image/shop-image (1).jpeg",
     shopavatar: "assets/image/shop-image (1).jpeg",
@@ -13,7 +13,7 @@ List<Product> products = [
     distance: "1km",
     rate: "4.3",
   ),
-  Product(
+  const Product(
     date: "12:00-13:00",
     shopcover: "assets/image/shop-image (2).jpg",
     shopavatar: "assets/image/shop-image (2).jpg",
@@ -24,7 +24,7 @@ List<Product> products = [
     distance: "1km",
     rate: "4.3",
   ),
-  Product(
+  const Product(
     date: "12:00-13:00",
     shopcover: "assets/image/shop-image (3).jpeg",
     shopavatar: "assets/image/shop-image (3).jpeg",
@@ -35,7 +35,7 @@ List<Product> products = [
     distance: "1km",
     rate: "4.3",
   ),
-  Product(
+  const Product(
     date: "12:00-13:00",
     shopcover: "assets/image/shop-image (4).jpeg",
     shopavatar: "assets/image/shop-image (4).jpeg",
@@ -46,7 +46,7 @@ List<Product> products = [
     distance: "1km",
     rate: "4.3",
   ),
-  Product(
+  const Product(
     date: "12:00-13:00",
     shopcover: "assets/image/shop-image (5).jpg",
     shopavatar: "assets/image/shop-image (5).jpg",
@@ -57,7 +57,7 @@ List<Product> products = [
     distance: "1km",
     rate: "4.3",
   ),
-  Product(
+  const Product(
     date: "12:00-13:00",
     shopcover: "assets/image/shop-image (6).jpg",
     shopavatar: "assets/image/shop-image (6).jpg",
@@ -68,7 +68,7 @@ List<Product> products = [
     distance: "1km",
     rate: "4.3",
   ),
-  Product(
+  const Product(
     date: "12:00-13:00",
     shopcover: "assets/image/shop-image (7).jpg",
     shopavatar: "assets/image/shop-image (7).jpg",
@@ -79,7 +79,7 @@ List<Product> products = [
     distance: "1km",
     rate: "4.3",
   ),
-  Product(
+  const Product(
     date: "12:00-13:00",
     shopcover: "assets/image/shop-image (8).jpg",
     shopavatar: "assets/image/shop-image (8).jpg",
@@ -90,7 +90,7 @@ List<Product> products = [
     distance: "1km",
     rate: "4.3",
   ),
-  Product(
+  const Product(
     date: "11:00",
     shopcover: "assets/image/shop-image (9).jpg",
     shopavatar: "assets/image/shop-image (9).jpg",
@@ -101,7 +101,7 @@ List<Product> products = [
     distance: "1km",
     rate: "4.3",
   ),
-  Product(
+  const Product(
     date: "12:00-13:00",
     shopcover: "assets/image/shop-image (10).jpg",
     shopavatar: "assets/image/shop-image (10).jpg",
@@ -112,7 +112,7 @@ List<Product> products = [
     distance: "1km",
     rate: "4.3",
   ),
-  Product(
+  const Product(
     date: "12:00-13:00",
     shopcover: "assets/image/shop-image (11).jpg",
     shopavatar: "assets/image/shop-image (11).jpg",
@@ -123,7 +123,7 @@ List<Product> products = [
     distance: "1km",
     rate: "4.3",
   ),
-  Product(
+  const Product(
     date: "12:00-13:00",
     shopcover: "assets/image/shop-image (12).jpg",
     shopavatar: "assets/image/shop-image (12).jpg",
@@ -134,7 +134,7 @@ List<Product> products = [
     distance: "1km",
     rate: "4.3",
   ),
-  Product(
+  const Product(
     date: "12:00-13:00",
     shopcover: "assets/image/shop-image (13).jpg",
     shopavatar: "assets/image/shop-image (13).jpg",
@@ -145,7 +145,7 @@ List<Product> products = [
     distance: "1km",
     rate: "4.3",
   ),
-  Product(
+  const Product(
     date: "12:00-13:00",
     shopcover: "assets/image/shop-image (14).jpg",
     shopavatar: "assets/image/shop-image (14).jpg",
@@ -156,7 +156,7 @@ List<Product> products = [
     distance: "1km",
     rate: "4.3",
   ),
-  Product(
+  const Product(
     date: "12:00-13:00",
     shopcover: "assets/image/shop-image (15).jpg",
     shopavatar: "assets/image/shop-image (15).jpg",
@@ -167,7 +167,7 @@ List<Product> products = [
     distance: "1km",
     rate: "4.3",
   ),
-  Product(
+  const Product(
     date: "12:00-13:00",
     shopcover: "assets/image/shop-image (16).jpg",
     shopavatar: "assets/image/shop-image (16).jpg",
@@ -178,7 +178,7 @@ List<Product> products = [
     distance: "1km",
     rate: "4.3",
   ),
-  Product(
+  const Product(
     date: "12:00-13:00",
     shopcover: "assets/image/shop-image (17).jpg",
     shopavatar: "assets/image/shop-image (17).jpg",
@@ -189,7 +189,7 @@ List<Product> products = [
     distance: "1km",
     rate: "4.3",
   ),
-  Product(
+  const Product(
     date: "12:00-13:00",
     shopcover: "assets/image/shop-image (18).jpeg",
     shopavatar: "assets/image/shop-image (18).jpeg",
@@ -200,7 +200,7 @@ List<Product> products = [
     distance: "1km",
     rate: "3.3",
   ),
-  Product(
+  const Product(
     date: "12:00-13:00",
     shopcover: "assets/image/shop-image (19).jpg",
     shopavatar: "assets/image/shop-image (19).jpg",

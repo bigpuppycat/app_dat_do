@@ -17,8 +17,8 @@ class Body extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Padding(
-            padding: const EdgeInsets.only(top: 8.0, bottom: 14),
+          const Padding(
+            padding: EdgeInsets.only(top: 8.0, bottom: 14),
             child: Text(
               'Nhập thông tin cửa hàng của bạn',
               style: TextStyle(
@@ -28,8 +28,8 @@ class Body extends StatelessWidget {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 24.0),
+          const Padding(
+            padding: EdgeInsets.only(bottom: 24.0),
             child: Text(
               'Kể chúng tôi nghe một chút về cửa hàng của bạn để chúng tôi giúp bạn mở tài khoản',
               style: TextStyle(
@@ -38,7 +38,7 @@ class Body extends StatelessWidget {
               ),
             ),
           ),
-          Text(
+          const Text(
             "Tên cửa hàng của bạn và địa chỉ",
             style: TextStyle(
               color: Colors.black,
@@ -46,8 +46,8 @@ class Body extends StatelessWidget {
               fontSize: 24,
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 8.0, bottom: 18),
+          const Padding(
+            padding: EdgeInsets.only(top: 8.0, bottom: 18),
             child: Text(
               'Lưu ý xác nhận hoặc viết chính xác tên cửa hàng và địa chỉ của bạn ',
               style: TextStyle(
@@ -91,8 +91,8 @@ class Body extends StatelessWidget {
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 12.0, top: 24),
+          const Padding(
+            padding: EdgeInsets.only(bottom: 12.0, top: 24),
             child: Text(
               'Loại cửa hàng',
               style: TextStyle(
@@ -102,8 +102,8 @@ class Body extends StatelessWidget {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 8.0),
+          const Padding(
+            padding: EdgeInsets.only(bottom: 8.0),
             child: Text(
               'Chọn loại cửa hàng miêu tả bạn tốt nhất ',
               style: TextStyle(
@@ -135,25 +135,22 @@ class Body extends StatelessWidget {
           ButtonBuilder2(title: 'Rau củ quả', onPress: () {}),
           ButtonBuilder2(title: 'khác', onPress: () {}),
           Center(
-            child: Container(
-              child: Container(
-                width: double.infinity,
-                child: ElevatedButton(
-                    child: Text("Lưu thông tin".toUpperCase(),
-                        style: TextStyle(fontSize: 14)),
-                    style: ButtonStyle(
-                        // padding: Padding(padding: padding),
-                        backgroundColor: MaterialStateProperty.all<Color>(
-                            Color.fromARGB(12, 0, 0, 0)),
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                                RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                        ))),
-                    onPressed: () => null),
-              ),
+            child: SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                  child: Text("Lưu thông tin".toUpperCase(),
+                      style: const TextStyle(fontSize: 14)),
+                  style: ButtonStyle(
+                      // padding: Padding(padding: padding),
+                      backgroundColor: MaterialStateProperty.all<Color>(
+                          const Color.fromARGB(12, 0, 0, 0)),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ))),
+                  onPressed: () => null),
             ),
-          )
+          ),
         ],
       ),
     ));

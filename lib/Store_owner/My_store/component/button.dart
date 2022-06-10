@@ -21,7 +21,7 @@ class ButtonBuilder extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(6),
             side: const BorderSide(
-              color: const Color.fromARGB(255, 36, 82, 38),
+              color: Color.fromARGB(255, 36, 82, 38),
               width: 1,
             ),
           ),
@@ -30,10 +30,9 @@ class ButtonBuilder extends StatelessWidget {
         onPressed: onPress,
         child: Row(
           children: [
-            Padding(
-              padding:
-                  const EdgeInsets.symmetric(vertical: 12.0, horizontal: 8),
-              child: const Icon(
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 12.0, horizontal: 8),
+              child: Icon(
                 Icons.add_circle_outline,
                 color: Colors.black,
                 size: 24.0,

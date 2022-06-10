@@ -14,11 +14,11 @@ class SectionTitle extends StatelessWidget {
       children: [
         Text(
           head1,
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900),
+          style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w900),
         ),
         TextButton(
           onPressed: () {},
-          child: Row(children: [
+          child: Row(children: const [
             Text(
               'Xem thêm',
               style: TextStyle(

@@ -17,9 +17,9 @@ class Section extends StatelessWidget {
                 Radius.circular(5),
               ),
             ),
-            child: Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: const Icon(Icons.mode_edit, color: Colors.black),
+            child: const Padding(
+              padding: EdgeInsets.all(10.0),
+              child: Icon(Icons.mode_edit, color: Colors.black),
             ),
           ),
           onTap: () {},
@@ -39,7 +39,7 @@ class Section extends StatelessWidget {
           ),
           onTap: () {},
         ),
-        SizedBox(
+        const SizedBox(
           width: 10,
         ),
         InkWell(
@@ -56,7 +56,7 @@ class Section extends StatelessWidget {
           ),
           onTap: () {},
         ),
-        SizedBox(
+        const SizedBox(
           width: 10,
         ),
         InkWell(

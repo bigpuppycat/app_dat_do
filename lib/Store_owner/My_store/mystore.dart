@@ -18,7 +18,7 @@ class Mystore extends StatelessWidget {
           backgroundColor: Colors.white,
           leading: IconButton(
             onPressed: () {},
-            icon: Icon(
+            icon: const Icon(
               Icons.menu,
               color: Colors.black,
             ),
@@ -26,7 +26,7 @@ class Mystore extends StatelessWidget {
           actions: [
             IconButton(
               onPressed: () {},
-              icon: Icon(
+              icon: const Icon(
                 Icons.notifications_outlined,
                 color: Colors.black54,
               ),

@@ -4,8 +4,8 @@ import 'card.dart';
 import 'data.dart';
 import 'package:app_dat_do/detail/detail.dart';
 
-class heo1 extends StatelessWidget {
-  const heo1({
+class Heo1 extends StatelessWidget {
+  const Heo1({
     Key? key,
   }) : super(key: key);
 
@@ -13,7 +13,7 @@ class heo1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SectionTitle(
+        const SectionTitle(
           head1: "heo1",
         ),
         SingleChildScrollView(

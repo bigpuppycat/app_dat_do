@@ -19,7 +19,7 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 18.0, horizontal: 18),
+        padding: const EdgeInsets.only(top: 18.0, left: 18),
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
@@ -37,16 +37,16 @@ class Body extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              YourPlace(),
-              PopularProducts(),
-              heo1(),
-              heo2(),
-              heo3(),
-              heo4(),
-              heo5(),
-              heo6(),
-              heo7(),
-              heo8(),
+              const YourPlace(),
+              const PopularProducts(),
+              const Heo1(),
+              const Heo2(),
+              const Heo3(),
+              const Heo4(),
+              const Heo5(),
+              const Heo6(),
+              const Heo7(),
+              const Heo8(),
             ],
           ),
         ),
