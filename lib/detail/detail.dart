@@ -14,7 +14,7 @@ class DetailsScreen extends StatelessWidget {
         child: Column(
           children: <Widget>[
             SizedBox(
-              height: 300.0,
+              height: 180.0,
               width: 280.0,
               child: Stack(
                 children: <Widget>[

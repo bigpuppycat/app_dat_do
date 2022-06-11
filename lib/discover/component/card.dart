@@ -31,17 +31,10 @@ class Card1 extends StatelessWidget {
     return GestureDetector(
         onTap: press,
         child: Padding(
-          padding: const EdgeInsets.only(left: 8, bottom: 18.0),
+          padding: const EdgeInsets.only(left: 14, bottom: 18.0),
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
-              // // boxShadow: [
-              // //   BoxShadow(
-              // //     color: Colors.grey.withOpacity(0.1),
-              // //     spreadRadius: 0.01,
-              // //     blurRadius: 0.01,
-              // //   ),
-              // ],
             ),
             child: Card(
               shadowColor: Colors.black54,

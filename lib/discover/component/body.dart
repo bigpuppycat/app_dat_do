@@ -19,12 +19,12 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: const EdgeInsets.only(top: 18.0, left: 18),
+        padding: const EdgeInsets.only(top: 18.0),
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
               Container(
-                padding: const EdgeInsets.only(top: 10.0),
+                padding: const EdgeInsets.only(top: 10.0, left: 16),
                 alignment: Alignment.centerLeft,
                 child: const Text(
                   'Khám Phá',

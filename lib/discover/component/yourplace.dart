@@ -11,7 +11,7 @@ class YourPlace extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Container(
-          padding: const EdgeInsets.only(left: 8),
+          padding: const EdgeInsets.only(left: 16),
           // anh bi freez oi :)) khong biet sai dau
           // bị đóng băng oe uh freeze o trang dau luon
 // khó xử ghê

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class SectionTitle extends StatelessWidget {
   const SectionTitle({
@@ -10,14 +11,16 @@ class SectionTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.end,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      // crossAxisAlignment: ,
+      // crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         Text(
           head1,
           style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w900),
         ),
         TextButton(
+          // , heo cố lênlênlên XDD
           onPressed: () {},
           child: Row(children: const [
             Text(
