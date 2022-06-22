@@ -21,36 +21,36 @@ class DetailsScreen extends StatelessWidget {
                   Positioned(
                     child: Row(
                       children: [
+                        ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                              primary: Colors.grey[50]?.withOpacity(0.5),
+                              shape: const CircleBorder()),
+                          child: const FittedBox(
+                              fit: BoxFit.fitWidth,
+                              child: Icon(Icons.savings_outlined, size: 18)),
+                        ),
                         SizedBox(
-                            width: 32,
-                            height: 32,
-                            child: FloatingActionButton(
-                              heroTag: "btn2",
-                              backgroundColor:
-                                  Colors.grey[50]?.withOpacity(0.5),
-                              onPressed: () {},
-                              child: const Icon(Icons.savings_outlined),
-                            )),
-                        SizedBox(
-                            width: 32,
-                            height: 32,
-                            child: FloatingActionButton(
-                              heroTag: "btn2",
-                              backgroundColor:
-                                  Colors.grey[50]?.withOpacity(0.5),
-                              onPressed: () {},
-                              child: const Icon(Icons.savings_outlined),
-                            )),
-                        SizedBox(
-                            width: 32,
-                            height: 32,
-                            child: FloatingActionButton(
-                              heroTag: "btn2",
-                              backgroundColor:
-                                  Colors.grey[50]?.withOpacity(0.5),
-                              onPressed: () {},
-                              child: const Icon(Icons.savings_outlined),
-                            )),
+                          width: 200,
+                        ),
+                        ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                              primary: Colors.grey[50]?.withOpacity(0.5),
+                              shape: const CircleBorder()),
+                          child: const FittedBox(
+                              fit: BoxFit.fitWidth,
+                              child: Icon(Icons.savings_outlined, size: 18)),
+                        ),
+                        ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                              primary: Colors.grey[50]?.withOpacity(0.5),
+                              shape: const CircleBorder()),
+                          child: const FittedBox(
+                              fit: BoxFit.fitWidth,
+                              child: Icon(Icons.savings_outlined, size: 18)),
+                        ),
                       ],
                     ),
                   ),

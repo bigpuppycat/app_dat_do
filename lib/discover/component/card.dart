@@ -171,17 +171,18 @@ class Card1 extends StatelessWidget {
                         Positioned(
                           right: 0,
                           top: 0,
-                          // ai viết hi tới đây lỗi code đánh anh chiến tranh
+                          // ai viết hi tới đây lỗi code đánh anh chiến tranh be heo co ganh qua heo gioi lam
                           child: ElevatedButton(
                             onPressed: () {},
                             style: ElevatedButton.styleFrom(
-                                primary: Colors.grey[50]?.withOpacity(0.5),
+                                primary: Colors.grey[50]?.withOpacity(0.3),
                                 shape: const CircleBorder()),
                             child: const FittedBox(
                                 fit: BoxFit.fitWidth,
                                 child: Icon(Icons.savings_outlined, size: 18)),
                           ),
                         ),
+                        // heo cho anh xem hinh cai anh nao chien tranh tranh
                         Positioned(
                           top: 42,
                           left: 10,
