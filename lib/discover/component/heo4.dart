@@ -2,7 +2,7 @@ import 'package:app_dat_do/discover/component/section_title.dart';
 import 'package:flutter/material.dart';
 import 'card.dart';
 import 'data.dart';
-import 'package:app_dat_do/detail/detail.dart';
+import 'package:app_dat_do/discover/component/detail.dart';
 
 class Heo4 extends StatelessWidget {
   const Heo4({

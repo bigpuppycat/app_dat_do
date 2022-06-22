@@ -151,18 +151,36 @@ class Card1 extends StatelessWidget {
                             ),
                           ),
                         ),
+                        // Positioned(
+                        //   right: 10,
+                        //   top: 10,
+                        //   child: SizedBox(
+                        //       width: 32,
+                        //       height: 32,
+                        // máy quá nhanh, em ko nhận ra là anh đã ra đi như thế. anh da chet dau
+
+                        // child: ElevatedButton.icon(
+                        //   style: ElevatedButton.styleFrom(
+                        //       primary: Colors.grey[50]?.withOpacity(0.5),
+                        //       shape: const CircleBorder()),
+                        //   onPressed: () {},
+                        //   icon:  Icon(Icons.heart_broken), label: ,
+                        // )),
+                        // ),
+
                         Positioned(
-                          right: 10,
-                          top: 10,
-                          child: SizedBox(
-                              width: 32,
-                              height: 32,
-                              child: FloatingActionButton(
-                                backgroundColor:
-                                    Colors.grey[50]?.withOpacity(0.5),
-                                onPressed: () {},
-                                child: const Icon(Icons.savings_outlined),
-                              )),
+                          right: 0,
+                          top: 0,
+                          // ai viết hi tới đây lỗi code đánh anh chiến tranh
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                                primary: Colors.grey[50]?.withOpacity(0.5),
+                                shape: const CircleBorder()),
+                            child: const FittedBox(
+                                fit: BoxFit.fitWidth,
+                                child: Icon(Icons.savings_outlined, size: 18)),
+                          ),
                         ),
                         Positioned(
                           top: 42,

@@ -19,6 +19,42 @@ class DetailsScreen extends StatelessWidget {
               child: Stack(
                 children: <Widget>[
                   Positioned(
+                    child: Row(
+                      children: [
+                        SizedBox(
+                            width: 32,
+                            height: 32,
+                            child: FloatingActionButton(
+                              heroTag: "btn2",
+                              backgroundColor:
+                                  Colors.grey[50]?.withOpacity(0.5),
+                              onPressed: () {},
+                              child: const Icon(Icons.savings_outlined),
+                            )),
+                        SizedBox(
+                            width: 32,
+                            height: 32,
+                            child: FloatingActionButton(
+                              heroTag: "btn2",
+                              backgroundColor:
+                                  Colors.grey[50]?.withOpacity(0.5),
+                              onPressed: () {},
+                              child: const Icon(Icons.savings_outlined),
+                            )),
+                        SizedBox(
+                            width: 32,
+                            height: 32,
+                            child: FloatingActionButton(
+                              heroTag: "btn2",
+                              backgroundColor:
+                                  Colors.grey[50]?.withOpacity(0.5),
+                              onPressed: () {},
+                              child: const Icon(Icons.savings_outlined),
+                            )),
+                      ],
+                    ),
+                  ),
+                  Positioned(
                     child: Container(
                       height: 100.0,
                       width: 300,
@@ -118,18 +154,6 @@ class DetailsScreen extends StatelessWidget {
                         fontWeight: FontWeight.w900,
                       ),
                     ),
-                  ),
-                  Positioned(
-                    right: 10,
-                    top: 10,
-                    child: SizedBox(
-                        width: 32,
-                        height: 32,
-                        child: FloatingActionButton(
-                          backgroundColor: Colors.grey[50]?.withOpacity(0.5),
-                          onPressed: () {},
-                          child: const Icon(Icons.savings_outlined),
-                        )),
                   ),
                   Positioned(
                     top: 42,
