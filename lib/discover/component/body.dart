@@ -17,39 +17,37 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.only(top: 18.0),
-        child: SingleChildScrollView(
-          child: Column(
-            children: <Widget>[
-              Container(
-                padding: const EdgeInsets.only(top: 10.0, left: 16),
-                alignment: Alignment.centerLeft,
-                child: const Text(
-                  'Khám Phá',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 24,
-                  ),
+    return SingleChildScrollView(
+      child: Column(
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.only(top: 18.0),
+            child: Container(
+              padding: const EdgeInsets.only(top: 10.0, left: 16),
+              alignment: Alignment.centerLeft,
+              child: const Text(
+                'Khám Phá',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 24,
                 ),
               ),
-              const SizedBox(
-                height: 10,
-              ),
-              const YourPlace(),
-              const PopularProducts(),
-              const Heo1(),
-              const Heo2(),
-              const Heo3(),
-              const Heo4(),
-              const Heo5(),
-              const Heo6(),
-              const Heo7(),
-              const Heo8(),
-            ],
+            ),
           ),
-        ),
+          const SizedBox(
+            height: 10,
+          ),
+          const YourPlace(),
+          const PopularProducts(),
+          const Heo1(),
+          const Heo2(),
+          const Heo3(),
+          const Heo4(),
+          const Heo5(),
+          const Heo6(),
+          const Heo7(),
+          const Heo8(),
+        ],
       ),
     );
   }

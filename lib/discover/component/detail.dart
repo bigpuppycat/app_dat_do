@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:app_dat_do/discover/component/list.dart';
+import 'package:flutter/services.dart';
 
 class DetailsScreen extends StatelessWidget {
   const DetailsScreen({Key? key, required this.product}) : super(key: key);
@@ -8,13 +9,21 @@ class DetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //heo tắt cái này đi ha
+    // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+    //     statusBarColor: Colors.transparent.withOpacity(0.9)));
+
     return Scaffold(
-        appBar: AppBar(
-      toolbarHeight: 200,
-      title: Column(
+      appBar: AppBar(
+        systemOverlayStyle: SystemUiOverlayStyle(
+            statusBarColor: Colors.yellow.withOpacity(0.5)),
+      ),
+      extendBody: true,
+      extendBodyBehindAppBar: true,
+      body: Column(
         children: <Widget>[
           SizedBox(
-            // height: 180.0,
+            // height: 180.
             // width: 280.0,
             child: Stack(
               children: <Widget>[
@@ -67,7 +76,7 @@ class DetailsScreen extends StatelessWidget {
                   ),
                 ),
                 Positioned(
-                  // top: 10,a
+                  top: 10,
                   child: Container(
                     height: 100.0,
                     decoration: BoxDecoration(
@@ -175,6 +184,6 @@ class DetailsScreen extends StatelessWidget {
           ),
         ],
       ),
-    ));
+    );
   }
 }
