@@ -11,12 +11,13 @@ class DetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     //heo tắt cái này đi ha
     // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    //     statusBarColor: Colors.transparent.withOpacity(0.9)));
+    //     statusBarColor: Colors.transparent);
 
     return Scaffold(
       appBar: AppBar(
-        systemOverlayStyle: SystemUiOverlayStyle(
-            statusBarColor: Colors.yellow.withOpacity(0.5)),
+        backgroundColor: Colors.transparent,
+        systemOverlayStyle:
+            const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
       ),
       extendBody: true,
       extendBodyBehindAppBar: true,
