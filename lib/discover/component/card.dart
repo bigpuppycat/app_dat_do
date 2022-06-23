@@ -47,7 +47,7 @@ class Card1 extends StatelessWidget {
                 children: <Widget>[
                   SizedBox(
                     height: 180.0,
-                    width: 280.0,
+                    // width: 280.0,
                     child: Stack(
                       children: <Widget>[
                         Positioned(
