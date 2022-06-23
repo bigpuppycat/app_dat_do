@@ -15,7 +15,7 @@ class DetailsScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.transparent, //ok
         systemOverlayStyle:
             const SystemUiOverlayStyle(statusBarColor: Colors.transparent),
       ),
@@ -50,7 +50,7 @@ class DetailsScreen extends StatelessWidget {
                             shape: const CircleBorder()),
                         child: const FittedBox(
                             fit: BoxFit.fitWidth,
-                            child: Icon(Icons.savings_outlined, size: 18)),
+                            child: Icon(Icons.arrow_back, size: 18)),
                       ),
                       SizedBox(
                         width: 200,
@@ -62,7 +62,7 @@ class DetailsScreen extends StatelessWidget {
                             shape: const CircleBorder()),
                         child: const FittedBox(
                             fit: BoxFit.fitWidth,
-                            child: Icon(Icons.savings_outlined, size: 18)),
+                            child: Icon(Icons.share, size: 18)),
                       ),
                       ElevatedButton(
                         onPressed: () {},
@@ -71,14 +71,16 @@ class DetailsScreen extends StatelessWidget {
                             shape: const CircleBorder()),
                         child: const FittedBox(
                             fit: BoxFit.fitWidth,
-                            child: Icon(Icons.savings_outlined, size: 18)),
+                            child: Icon(Icons.favorite, size: 18)),
                       ),
                     ],
                   ),
                 ),
+                //gradient đen
                 Positioned(
-                  top: 10,
+                  bottom: 0,
                   child: Container(
+                    width: MediaQuery.of(context).size.width,
                     height: 100.0,
                     decoration: BoxDecoration(
                       color: Colors.white,
@@ -93,8 +95,10 @@ class DetailsScreen extends StatelessWidget {
                     ),
                   ),
                 ),
+
+                //title
                 Positioned(
-                  top: 70.0,
+                  bottom: 24.0,
                   left: 70.0,
                   right: 10.0,
                   child: FittedBox(
@@ -109,63 +113,10 @@ class DetailsScreen extends StatelessWidget {
                     ),
                   ),
                 ),
+
+                //shop avatar
                 Positioned(
-                  top: 106.0,
-                  left: 10.0,
-                  right: 10.0,
-                  child: Text(
-                    product.type,
-                    // Optional params to try:
-                    style: const TextStyle(
-                      color: Colors.black,
-                      fontSize: 12.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                Positioned(
-                  top: 122.0,
-                  left: 10.0,
-                  right: 10.0,
-                  child: Text(
-                    product.date,
-                    // Optional params to try:
-                    style: const TextStyle(
-                      color: Colors.black,
-                      fontSize: 14.0,
-                      fontWeight: FontWeight.w300,
-                    ),
-                  ),
-                ),
-                Positioned(
-                  bottom: 10.0,
-                  left: 10.0,
-                  right: 10.0,
-                  child: Text(
-                    product.distance,
-                    // Optional params to try:
-                    style: const TextStyle(
-                      color: Colors.black,
-                      fontSize: 14.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                Positioned(
-                  bottom: 10.0,
-                  right: 10.0,
-                  child: Text(
-                    product.price,
-                    // Optional params to try:
-                    style: const TextStyle(
-                      color: Colors.black,
-                      fontSize: 17.0,
-                      fontWeight: FontWeight.w900,
-                    ),
-                  ),
-                ),
-                Positioned(
-                  top: 42,
+                  bottom: 16,
                   left: 10,
                   child: Container(
                     width: 50,
@@ -182,6 +133,160 @@ class DetailsScreen extends StatelessWidget {
                 ),
               ],
             ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              //food type
+              Row(
+                children: [
+                  Align(
+                      alignment: Alignment.centerLeft,
+                      child: Icon(Icons.shopping_bag_outlined)),
+                  Container(
+                    margin: const EdgeInsets.only(left: 4.0),
+                    child: Text(
+                      product.type,
+                      style: const TextStyle(
+                        color: Colors.black,
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  )
+                ],
+              ),
+
+              //thêm price gốc
+              Text(
+                product.price,
+                style: const TextStyle(
+                  color: Colors.black,
+                  fontSize: 17.0,
+                  fontWeight: FontWeight.w900,
+                ),
+              ),
+            ],
+          ),
+          Row(children: [
+            Text(
+              product.date,
+              style: const TextStyle(
+                color: Colors.black,
+                fontSize: 14.0,
+                fontWeight: FontWeight.w300,
+              ),
+            ),
+
+            // khoảng cách
+            Text(
+              product.distance,
+              style: const TextStyle(
+                color: Colors.black,
+                fontSize: 14.0,
+                fontWeight: FontWeight.bold,
+              ),
+            )
+          ]),
+          Container(
+            decoration: BoxDecoration(
+              border: Border(
+                top: BorderSide(width: 0.5, color: Colors.green.shade900),
+                bottom: BorderSide(width: 0.5, color: Colors.green.shade900),
+              ),
+              color: Colors.white,
+            ),
+            child: Row(children: <Widget>[
+              const Padding(
+                padding: EdgeInsets.only(right: 20.0, left: 6),
+                child: Icon(
+                  Icons.lightbulb_outlined,
+                  color: Colors.white,
+                  size: 24.0,
+                ),
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text('Chỉ dẫn nhanh cho',
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                  SizedBox(
+                    height: 4,
+                  ),
+                  Text('TooGood',
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold))
+                ],
+              ),
+              const Padding(
+                padding: EdgeInsets.only(right: 20.0, left: 6),
+                child: Icon(
+                  Icons.lightbulb_outlined,
+                  color: Colors.white,
+                  size: 24.0,
+                ),
+              ),
+            ]),
+          ),
+          Container(
+            decoration: BoxDecoration(
+              border: Border(
+                top: BorderSide(width: 0.5, color: Colors.green.shade900),
+                bottom: BorderSide(width: 0.5, color: Colors.green.shade900),
+              ),
+              color: Colors.white,
+            ),
+            child: Row(children: <Widget>[
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text('Chỉ dẫn nhanh cho',
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+                  SizedBox(
+                    height: 4,
+                  ),
+                  Text('TooGood',
+                      style:
+                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold))
+                ],
+              ),
+            ]),
+          ),
+          Container(
+            decoration: BoxDecoration(
+              border: Border(
+                top: BorderSide(width: 0.5, color: Colors.green.shade900),
+                bottom: BorderSide(width: 0.5, color: Colors.green.shade900),
+              ),
+              color: Colors.white,
+            ),
+            child: Row(children: <Widget>[
+              const Padding(
+                padding: EdgeInsets.only(right: 20.0, left: 6),
+                child: Icon(
+                  Icons.lightbulb_outlined,
+                  color: Colors.white,
+                  size: 24.0,
+                ),
+              ),
+              Text(
+                "This is a Boder with One Side",
+                textDirection: TextDirection.ltr,
+                style: TextStyle(color: Colors.black),
+              ),
+              const Padding(
+                padding: EdgeInsets.only(right: 20.0, left: 6),
+                child: Icon(
+                  Icons.lightbulb_outlined,
+                  color: Colors.white,
+                  size: 24.0,
+                ),
+              ),
+            ]),
           ),
         ],
       ),
