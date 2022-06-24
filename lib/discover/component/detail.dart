@@ -9,10 +9,6 @@ class DetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //heo tắt cái này đi ha
-    // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    //     statusBarColor: Colors.transparent);
-
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.transparent, //ok
@@ -38,10 +34,13 @@ class DetailsScreen extends StatelessWidget {
             child: const Text('Đăng nhập bằng FACEBOOK'),
           ),
         ),
-        body:  SingleChildScrollView(Column(
+        body: SingleChildScrollView(
+            child: Column(
           children: <Widget>[
-       
- Stack(
+            SizedBox(
+              // height: 180,
+              // width: 280.0,
+              child: Stack(
                 children: <Widget>[
                   Positioned(
                     // height: 100,
@@ -452,6 +451,6 @@ class DetailsScreen extends StatelessWidget {
               ),
             ),
           ],
-        ));
+        )));
   }
 }
