@@ -3,7 +3,7 @@ import '../bottom_navigation_mystore.dart';
 import 'component/body.dart';
 
 class Mystore extends StatelessWidget {
-  static String routeName = "/mystore";
+  static String routeName = '/mystore';
 
   const Mystore({
     Key? key,

@@ -4,6 +4,7 @@ import 'card.dart';
 import 'data.dart';
 import 'package:app_dat_do/discover/component/detail.dart';
 
+//he nhô chào buổi chiều của ụt chào buổi sásáng ụtcủa anh XD
 class PopularProducts extends StatelessWidget {
   const PopularProducts({
     Key? key,
@@ -13,6 +14,7 @@ class PopularProducts extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        // em heo ò ó o 🐥🐤⛱️
         const SectionTitle(
           head1: "Popular",
         ),

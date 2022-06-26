@@ -116,7 +116,6 @@ class Card1 extends StatelessWidget {
                           right: 10.0,
                           child: Text(
                             date,
-                            // Optional params to try:
                             style: const TextStyle(
                               color: Colors.black,
                               fontSize: 14.0,
@@ -171,7 +170,6 @@ class Card1 extends StatelessWidget {
                         Positioned(
                           right: 0,
                           top: 0,
-                          // ai viết hi tới đây lỗi code đánh anh chiến tranh be heo co ganh qua heo gioi lam
                           child: ElevatedButton(
                             onPressed: () {},
                             style: ElevatedButton.styleFrom(
@@ -182,7 +180,7 @@ class Card1 extends StatelessWidget {
                                 child: Icon(Icons.savings_outlined, size: 18)),
                           ),
                         ),
-                        // heo cho anh xem hinh cai anh nao chien tranh tranh
+
                         Positioned(
                           top: 42,
                           left: 10,

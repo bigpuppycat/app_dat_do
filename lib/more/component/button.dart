@@ -33,7 +33,7 @@ class Button1 extends StatelessWidget {
           ),
         ),
         onPressed: () {
-          onPress;
+          Navigator.pushNamed(context, onPress);
         },
 
         style: ButtonStyle(

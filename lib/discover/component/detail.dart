@@ -111,143 +111,185 @@ class DetailsScreen extends StatelessWidget {
                   ),
 
                   //shop title
-                  Positioned(
-                    bottom: 24.0,
-                    left: 70.0,
-                    right: 10.0,
-                    child: FittedBox(
-                      fit: BoxFit.scaleDown,
-                      alignment: Alignment.centerLeft,
-                      child: Row(
-                        children: [
-                          Text(
-                            product.title,
-                            style: const TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                                fontSize: 20),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
 
                   //shop avatar
                   Positioned(
-                    bottom: 16,
-                    left: 10,
-                    child: Container(
-                      width: 50,
-                      height: 50,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.white, width: 1),
-                        image: DecorationImage(
-                          image: AssetImage(product.shopavatar),
-                          fit: BoxFit.fill,
+                    bottom: 14,
+                    left: 16,
+                    child: Row(
+                      children: [
+                        Positioned(
+                          bottom: 14,
+                          left: 16,
+                          child: Container(
+                            width: 68,
+                            height: 68,
+                            decoration: BoxDecoration(
+                              border: Border.all(color: Colors.white, width: 1),
+                              image: DecorationImage(
+                                image: AssetImage(product.shopavatar),
+                                fit: BoxFit.fill,
+                              ),
+                              shape: BoxShape.circle,
+                            ),
+                          ),
                         ),
-                        shape: BoxShape.circle,
-                      ),
+                        Positioned(
+                          child: FittedBox(
+                            fit: BoxFit.scaleDown,
+                            alignment: Alignment.centerLeft,
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 8.0),
+                              child: Text(
+                                //Text Tiêu đề title
+                                product.title,
+                                style: const TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                    fontSize: 20),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],
               ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                //food type
-                Row(
-                  children: [
-                    const Align(
-                        alignment: Alignment.centerLeft,
-                        child: const Icon(Icons.shopping_bag_outlined)),
-                    Container(
-                      margin: const EdgeInsets.only(left: 4.0),
-                      child: Text(
-                        product.type,
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: [
+                          const Align(
+                              alignment: Alignment.centerLeft,
+                              child:
+                                  Icon(Icons.shopping_bag_outlined, size: 22)),
+                          Container(
+                            margin: const EdgeInsets.only(left: 4.0),
+                            child: Text(
+                              //Text Loại đồ ăn food type
+                              product.type,
+                              style: const TextStyle(
+                                color: Colors.black,
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                      Text(
+                        //price gốc
+                        product.price,
                         style: const TextStyle(
                           color: Colors.black,
-                          fontSize: 16.0,
-                          fontWeight: FontWeight.bold,
+                          fontSize: 14.0,
+                          fontWeight: FontWeight.w300,
                         ),
                       ),
-                    )
-                  ],
-                ),
-
-                //thêm price gốc
-                Text(
-                  product.price,
-                  style: const TextStyle(
-                    color: Colors.black,
-                    fontSize: 17.0,
-                    fontWeight: FontWeight.w900,
+                    ],
                   ),
-                ),
-              ],
-            ),
-            Row(children: [
-              Text(
-                product.date,
-                style: const TextStyle(
-                  color: Colors.black,
-                  fontSize: 14.0,
-                  fontWeight: FontWeight.w300,
-                ),
-              ),
-
-              // khoảng cách
-              Text(
-                product.distance,
-                style: const TextStyle(
-                  color: Colors.black,
-                  fontSize: 14.0,
-                  fontWeight: FontWeight.bold,
-                ),
-              )
-            ]),
-            Container(
-              decoration: BoxDecoration(
-                border: Border(
-                  top: BorderSide(width: 0.5, color: Colors.green.shade900),
-                  bottom: BorderSide(width: 0.5, color: Colors.green.shade900),
-                ),
-              ),
-              child: Row(children: <Widget>[
-                const Padding(
-                  padding: EdgeInsets.only(right: 20.0, left: 6),
-                  child: Icon(
-                    Icons.pin_drop_outlined,
-                    color: Colors.black54,
-                    size: 24.0,
-                  ),
-                ),
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    Text('79 Chùa Láng, P. Láng Thượng,  Quận Đống Đa, Hà Nội',
-                        style: TextStyle(
-                            fontSize: 16, fontWeight: FontWeight.normal)),
-                    SizedBox(
-                      height: 4,
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(right: 8.0, bottom: 6, top: 6),
+                    child: Row(
+                      children: [
+                        //text đánh giá rate
+                        Padding(
+                          padding: const EdgeInsets.only(right: 6.0),
+                          child: Icon(
+                            Icons.star_border,
+                            color: Colors.orange,
+                            size: 20,
+                          ),
+                        ),
+                        Text(
+                          product.rate,
+                          //add date lượt đánh giá vd: (10)
+                        )
+                      ],
                     ),
-                    Text('Thêm thông tin về cửa hàng',
-                        style: TextStyle(
-                            fontSize: 12, fontWeight: FontWeight.w400))
-                  ],
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(right: 20.0, left: 6),
-                  child: Icon(
-                    Icons.lightbulb_outlined,
-                    color: Colors.green,
-                    size: 24.0,
+                  ),
+
+                  // pickup time
+                  Row(children: [
+                    Padding(
+                      padding: const EdgeInsets.only(right: 6.0),
+                      child: Icon(
+                        Icons.access_time_rounded,
+                        size: 20,
+                      ),
+                    ),
+                    Text(
+                      'Pick up:',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      product.date,
+                      style: const TextStyle(
+                        color: Colors.black54,
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ]),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Container(
+                // height: MediaQuery.of(context).size.height,
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                  border: Border(
+                    top: BorderSide(width: 0.5, color: Colors.black87),
+                    bottom: BorderSide(width: 0.5, color: Colors.black87),
                   ),
                 ),
-              ]),
+                child: Flexible(
+                  child: Row(children: <Widget>[
+                    Icon(
+                      Icons.pin_drop_outlined,
+                      color: Colors.black54,
+                      size: 24.0,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Text('79 Chùa Láng, P. Láng ',
+                              //,
+                              //  Quận Đống Đa, Hà Nội
+
+                              style: TextStyle(
+                                  fontSize: 16, fontWeight: FontWeight.normal)),
+                          SizedBox(
+                            height: 4,
+                          ),
+                          Text('Thêm thông tin về cửa hàng',
+                              style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w400,
+                                  color: Colors.black54))
+                        ],
+                      ),
+                    ),
+                  ]),
+                ),
+              ),
             ),
             Container(
+              // height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                 border: Border(
                   top: BorderSide(width: 0.5, color: Colors.green.shade900),
@@ -256,28 +298,33 @@ class DetailsScreen extends StatelessWidget {
               ),
 
               //Miêu tả
-              child: Row(children: <Widget>[
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    Text('Nhận được gì',
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.w600)),
-                    SizedBox(
-                      height: 4,
-                    ),
-                    Text(
-                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exe',
+              child: Flexible(
+                child: Row(children: <Widget>[
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Text('Nhận được gì',
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.w600)),
+                      SizedBox(
+                        height: 4,
+                      ),
+
+                      Text(
+                        'Lorem ipsum dolor sit amet, consectetur adip',
                         overflow: TextOverflow.ellipsis,
                         maxLines: 5,
                         style: TextStyle(
-                            fontSize: 14, fontWeight: FontWeight.normal)),
-                    // dòng này à .
-                    //yes
-                  ],
-                ),
-              ]),
+                            fontSize: 14, fontWeight: FontWeight.normal),
+                      ),
+
+                      // dòng này à .
+                      //yes
+                    ],
+                  ),
+                ]),
+              ),
             ),
             Container(
               decoration: BoxDecoration(
