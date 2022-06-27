@@ -122,8 +122,8 @@ class DetailsScreen extends StatelessWidget {
                           bottom: 14,
                           left: 16,
                           child: Container(
-                            width: 68,
-                            height: 68,
+                            width: 64,
+                            height: 64,
                             decoration: BoxDecoration(
                               border: Border.all(color: Colors.white, width: 1),
                               image: DecorationImage(
