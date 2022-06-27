@@ -95,7 +95,7 @@ class DetailsScreen extends StatelessWidget {
                     bottom: 0,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: 100.0,
+                      height: 120.0,
                       decoration: BoxDecoration(
                         color: Colors.white,
                         gradient: LinearGradient(
@@ -120,7 +120,8 @@ class DetailsScreen extends StatelessWidget {
                       children: [
                         Positioned(
                           bottom: 14,
-                          left: 16,
+                          left: 16, //hello puppy // hi baby kiss you
+
                           child: Container(
                             width: 64,
                             height: 64,
@@ -139,9 +140,9 @@ class DetailsScreen extends StatelessWidget {
                             fit: BoxFit.scaleDown,
                             alignment: Alignment.centerLeft,
                             child: Padding(
-                              padding: const EdgeInsets.only(left: 8.0),
+                              padding: const EdgeInsets.only(left: 16.0),
                               child: Text(
-                                //Text Tiêu đề title
+                                //Text Tên shop Tiêu đề title
                                 product.title,
                                 style: const TextStyle(
                                     fontWeight: FontWeight.bold,
@@ -201,8 +202,8 @@ class DetailsScreen extends StatelessWidget {
                     child: Row(
                       children: [
                         //text đánh giá rate
-                        Padding(
-                          padding: const EdgeInsets.only(right: 6.0),
+                        const Padding(
+                          padding: EdgeInsets.only(right: 6.0),
                           child: Icon(
                             Icons.star_border,
                             color: Colors.orange,
@@ -219,14 +220,14 @@ class DetailsScreen extends StatelessWidget {
 
                   // pickup time
                   Row(children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 6.0),
-                      child: Icon(
+                    const Padding(
+                      padding: EdgeInsets.only(right: 6.0),
+                      child: const Icon(
                         Icons.access_time_rounded,
                         size: 20,
                       ),
                     ),
-                    Text(
+                    const Text(
                       'Pick up:',
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
@@ -242,26 +243,26 @@ class DetailsScreen extends StatelessWidget {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: Container(
-                // height: MediaQuery.of(context).size.height,
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                  border: Border(
-                    top: BorderSide(width: 0.5, color: Colors.black87),
-                    bottom: BorderSide(width: 0.5, color: Colors.black87),
-                  ),
+            Container(
+              // height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+              decoration: const BoxDecoration(
+                border: const Border(
+                  top: BorderSide(width: 0.5, color: Colors.black26),
+                  bottom: BorderSide(width: 0.5, color: Colors.black26),
                 ),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
                 child: Flexible(
                   child: Row(children: <Widget>[
-                    Icon(
+                    const Icon(
                       Icons.pin_drop_outlined,
                       color: Colors.black54,
                       size: 24.0,
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(16.0),
+                      padding: const EdgeInsets.only(left: 16.0),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -287,180 +288,200 @@ class DetailsScreen extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
-              // height: MediaQuery.of(context).size.height,
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
-                border: Border(
-                  top: BorderSide(width: 0.5, color: Colors.green.shade900),
-                  bottom: BorderSide(width: 0.5, color: Colors.green.shade900),
-                ),
-              ),
-
-              //Miêu tả
+            Padding(
+              padding: const EdgeInsets.all(16),
               child: Flexible(
-                child: Row(children: <Widget>[
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      Text('Nhận được gì',
-                          style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.w600)),
-                      SizedBox(
-                        height: 4,
-                      ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(children: <Widget>[
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          Padding(
+                            padding: EdgeInsets.only(bottom: 8.0),
+                            child: Text('Nhận được gì',
+                                style: TextStyle(
+                                    fontSize: 17, fontWeight: FontWeight.w500)),
+                          ),
+                          SizedBox(
+                            height: 4,
+                          ),
 
-                      Text(
-                        'Lorem ipsum dolor sit amet, consectetur adip',
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 5,
-                        style: TextStyle(
-                            fontSize: 14, fontWeight: FontWeight.normal),
-                      ),
+                          Text(
+                            'Quán ăn lâu đời Bún bò nam bộ truyền thống',
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 5,
+                            style: TextStyle(
+                                fontSize: 14, fontWeight: FontWeight.normal),
+                          ),
 
-                      // dòng này à .
-                      //yes
-                    ],
-                  ),
-                ]),
+                          //thẻ phân loại vd: meal,
+                        ],
+                      ),
+                    ]),
+                    const Icon(
+                      Icons.keyboard_arrow_right_rounded,
+                      color: Colors.teal,
+                      size: 24.0,
+                    ),
+                  ],
+                ),
               ),
             ),
             Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 border: Border(
-                  top: BorderSide(width: 0.5, color: Colors.green.shade900),
-                  bottom: BorderSide(width: 0.5, color: Colors.green.shade900),
+                  top: BorderSide(width: 0.5, color: Colors.black26),
+                  bottom: BorderSide(width: 0.5, color: Colors.black26),
                 ),
               ),
-              child: Row(children: const <Widget>[
-                Padding(
-                  padding: EdgeInsets.only(right: 20.0, left: 6),
-                  child: Icon(
-                    Icons.lightbulb_outlined,
-                    color: Colors.green,
-                    size: 24.0,
-                  ),
-                ),
-                Text(
-                  "This is a Boder with One Side",
-                  textDirection: TextDirection.ltr,
-                  style: TextStyle(color: Colors.black),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(right: 20.0, left: 6),
-                  child: Icon(
-                    Icons.lightbulb_outlined,
-                    color: Colors.green,
-                    size: 24.0,
-                  ),
-                ),
-              ]),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border(
-                  top: BorderSide(width: 0.5, color: Colors.green.shade900),
-                  bottom: BorderSide(width: 0.5, color: Colors.green.shade900),
-                ),
-              ),
-              child: Column(
-                children: <Widget>[
-                  const Text(
-                    "This is a Boder with One Side",
-                    textDirection: TextDirection.ltr,
-                    style: TextStyle(color: Colors.black),
-                  ),
-                  Row(
-                    children: const <Widget>[
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(children: <Widget>[
                       Padding(
-                        padding: EdgeInsets.only(right: 20.0, left: 6),
+                        padding: EdgeInsets.only(right: 16.0),
                         child: Icon(
-                          Icons.lightbulb_outlined,
-                          color: Colors.green,
+                          Icons.ac_unit_rounded,
+                          color: Colors.teal,
                           size: 24.0,
                         ),
                       ),
-                      Text(
-                        "This is a Boder with One Side",
-                        textDirection: TextDirection.ltr,
+                      const Text(
+                        "Nguyên liệu và dị ứng",
                         style: TextStyle(color: Colors.black),
                       ),
-                    ],
-                  ),
-                ],
+                    ]),
+                    const Icon(
+                      Icons.keyboard_arrow_down_rounded,
+                      color: Colors.teal,
+                      size: 24.0,
+                    ),
+                  ],
+                ),
               ),
             ),
             Container(
-              decoration: BoxDecoration(
-                border: Border(
-                  top: BorderSide(width: 0.5, color: Colors.green.shade900),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  children: <Widget>[
+                    const Text(
+                      "Mọi người đang nói gì",
+                      textDirection: TextDirection.ltr,
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 16.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: const <Widget>[
+                          Padding(
+                            padding: EdgeInsets.only(right: 8.0),
+                            child: Icon(
+                              Icons.star_rate_rounded,
+                              color: Colors.orange,
+                              size: 24.0,
+                            ),
+                          ),
+                          Text(
+                            //code chưa có data code
+                            "3.5 / 5",
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 26,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              child: Column(
-                children: <Widget>[
-                  const Text(
-                    "This is a Boder with One Side",
-                    textDirection: TextDirection.ltr,
-                    style: TextStyle(color: Colors.black),
-                  ),
-                  Row(
-                    children: const <Widget>[
-                      Padding(
-                        padding: EdgeInsets.only(right: 20.0, left: 6),
-                        child: Icon(
-                          Icons.lightbulb_outlined,
-                          color: Colors.green,
-                          size: 24.0,
+            ),
+            Container(
+              padding:
+                  EdgeInsets.only(left: 30, right: 30, bottom: 16, top: 16),
+              decoration: BoxDecoration(
+                border: Border(
+                  top: BorderSide(width: 0.5, color: Colors.pink),
+                ),
+              ),
+              child: Center(
+                child: Column(
+                  children: <Widget>[
+                    Text(
+                      "TOP 3 ĐIỂM DẤU ẤN",
+                      textDirection: TextDirection.ltr,
+                      style: TextStyle(
+                        color: Colors.teal.shade700,
+                        fontSize: 16,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                    Row(
+                      children: const <Widget>[
+                        Padding(
+                          padding: EdgeInsets.only(right: 20.0, left: 6),
+                          child: Icon(
+                            Icons.sports_handball_rounded,
+                            color: Colors.green,
+                            size: 24.0,
+                          ),
                         ),
-                      ),
-                      Text(
-                        "This is a Boder with One Side",
-                        textDirection: TextDirection.ltr,
-                        style: TextStyle(color: Colors.black),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: const <Widget>[
-                      Padding(
-                        padding: EdgeInsets.only(right: 20.0, left: 6),
-                        child: Icon(
-                          Icons.lightbulb_outlined,
-                          color: Colors.green,
-                          size: 24.0,
+                        Text(
+                          "Thân thiện",
+                          textDirection: TextDirection.ltr,
+                          style: TextStyle(color: Colors.black),
                         ),
-                      ),
-                      Text(
-                        "This is a Boder with One Side",
-                        textDirection: TextDirection.ltr,
-                        style: TextStyle(color: Colors.black),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: const <Widget>[
-                      Padding(
-                        padding: EdgeInsets.only(right: 20.0, left: 6),
-                        child: Icon(
-                          Icons.lightbulb_outlined,
-                          color: Colors.green,
-                          size: 24.0,
+                      ],
+                    ),
+                    Row(
+                      children: const <Widget>[
+                        Padding(
+                          padding: EdgeInsets.only(right: 20.0, left: 6),
+                          child: Icon(
+                            Icons.money,
+                            color: Colors.green,
+                            size: 24.0,
+                          ),
                         ),
-                      ),
-                      Text(
-                        "This is a Boder with One Side",
-                        textDirection: TextDirection.ltr,
-                        style: TextStyle(color: Colors.black),
-                      ),
-                    ],
-                  ),
-                  const Text(
-                    "This is a Boder with One Side",
-                    textDirection: TextDirection.ltr,
-                    style: TextStyle(color: Colors.black),
-                  ),
-                ],
+                        Text(
+                          "Món hời",
+                          textDirection: TextDirection.ltr,
+                          style: TextStyle(color: Colors.black),
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: const <Widget>[
+                        Padding(
+                          padding: EdgeInsets.only(right: 20.0, left: 6),
+                          child: Icon(
+                            Icons.access_time,
+                            color: Colors.green,
+                            size: 24.0,
+                          ),
+                        ),
+                        Text(
+                          "Nhận nhanh",
+                          style: TextStyle(color: Colors.black),
+                        ),
+                      ],
+                    ),
+                    const Text(
+                      "Dựa vào 46 đánh giá trong 6 tháng qua",
+                      style: TextStyle(color: Colors.black54),
+                    ),
+                  ],
+                ),
               ),
             ),
             Container(
@@ -473,7 +494,7 @@ class DetailsScreen extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   const Text(
-                    "This is a Boder with One Side",
+                    "Điều bạn cần biết",
                     textDirection: TextDirection.ltr,
                     style: TextStyle(color: Colors.black),
                   ),
@@ -488,8 +509,7 @@ class DetailsScreen extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        "This is a Boder with One Side",
-                        textDirection: TextDirection.ltr,
+                        "Cửa hàng sẽ cung cấp đóng gọi và mọi thứ bạn cần để mang túi đồ ăn về nhà",
                         style: TextStyle(color: Colors.black),
                       ),
                     ],
