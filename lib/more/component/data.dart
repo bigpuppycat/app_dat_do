@@ -26,6 +26,6 @@ List<MoreBuilder> builders = [
   MoreBuilder(
     title: 'Cửa hàng của tôi',
     icon: Icons.beenhere_outlined,
-    onPress: '/mystore',
+    onPress: '/Ownermenu',
   ),
 ];

@@ -15,8 +15,8 @@ class Button1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(6),
-      width: 350,
-      height: 48,
+      width: 360,
+      height: 60,
       child: ElevatedButton.icon(
         // style: ,
         icon: Icon(
@@ -33,7 +33,7 @@ class Button1 extends StatelessWidget {
           ),
         ),
         onPressed: () {
-          onPress;
+          Navigator.pushNamed(context, onPress);
         },
 
         style: ButtonStyle(

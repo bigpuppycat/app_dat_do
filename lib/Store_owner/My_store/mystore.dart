@@ -3,8 +3,6 @@ import '../bottom_navigation_mystore.dart';
 import 'component/body.dart';
 
 class Mystore extends StatelessWidget {
-  static String routeName = '/mystore';
-
   const Mystore({
     Key? key,
   }) : super(key: key);
@@ -33,7 +31,6 @@ class Mystore extends StatelessWidget {
             ),
           ]),
       body: const Body(),
-      bottomNavigationBar: const BottomNavigationmystore(),
     );
   }
 }

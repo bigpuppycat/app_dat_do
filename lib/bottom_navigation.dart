@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class BottomNavigation extends StatefulWidget {
-  static String routeName = "/Usermenu";
+  static String routeName = '/Usermenu';
   const BottomNavigation({Key? key}) : super(key: key);
 
   @override

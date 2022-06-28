@@ -12,9 +12,6 @@ class Menu extends StatelessWidget {
     return Column(
       children: [
         SingleChildScrollView(
-          physics: const NeverScrollableScrollPhysics(
-              parent: AlwaysScrollableScrollPhysics()),
-          scrollDirection: Axis.horizontal,
           child: Column(
             children: List.generate(
               builders.length,
