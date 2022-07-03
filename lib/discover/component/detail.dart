@@ -57,12 +57,9 @@ class DetailsScreen extends StatelessWidget {
               child: Column(
             children: <Widget>[
               SizedBox(
-                // height: 180,
-                // width: 280.0,
                 child: Stack(
                   children: <Widget>[
                     Positioned(
-                      // height: 100,
                       child: Container(
                         child: Image.asset(
                           product.shopcover,
@@ -74,20 +71,22 @@ class DetailsScreen extends StatelessWidget {
                       ),
                     ),
                     Positioned(
+                      top: 24,
+                      child: ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                            primary: Colors.grey[50]?.withOpacity(0.5),
+                            shape: const CircleBorder()),
+                        child: const FittedBox(
+                            fit: BoxFit.fitWidth,
+                            child: Icon(Icons.arrow_back, size: 18)),
+                      ),
+                    ),
+                    Positioned(
+                      top: 24,
+                      right: 0,
                       child: Row(
                         children: [
-                          ElevatedButton(
-                            onPressed: () {},
-                            style: ElevatedButton.styleFrom(
-                                primary: Colors.grey[50]?.withOpacity(0.5),
-                                shape: const CircleBorder()),
-                            child: const FittedBox(
-                                fit: BoxFit.fitWidth,
-                                child: Icon(Icons.arrow_back, size: 18)),
-                          ),
-                          const SizedBox(
-                            width: 200,
-                          ),
                           ElevatedButton(
                             onPressed: () {},
                             style: ElevatedButton.styleFrom(
@@ -521,7 +520,8 @@ class DetailsScreen extends StatelessWidget {
                 ),
               ),
               Container(
-                margin: const EdgeInsets.symmetric(vertical: 16),
+                margin:
+                    const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
                 decoration: BoxDecoration(
                   border: Border(
                     top: BorderSide(width: 0.5, color: Colors.black26),
@@ -531,8 +531,7 @@ class DetailsScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     const Padding(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 16.0, horizontal: 16),
+                      padding: EdgeInsets.symmetric(vertical: 16.0),
                       child: Text(
                         "Điều bạn cần biết",
                         style: TextStyle(
