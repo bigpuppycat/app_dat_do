@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../bottom_navigation_mystore.dart';
+
 import 'component/body.dart';
 
 class Mystore extends StatelessWidget {

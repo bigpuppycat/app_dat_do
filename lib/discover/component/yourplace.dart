@@ -56,7 +56,7 @@ class YourPlace extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),
-                primary: Color.fromARGB(54, 108, 108, 108),
+                primary: const Color.fromARGB(54, 108, 108, 108),
                 elevation: 0,
                 shadowColor: Colors.transparent,
               ),
