@@ -46,22 +46,6 @@ class Button1 extends StatelessWidget {
             ),
           ),
         ),
-        // child: RichText(
-        //   text: TextSpan(
-        //     children: [
-        //       WidgetSpan(
-
-        //       TextSpan(
-        //         text: title,
-        //         style: const TextStyle(
-        //           fontWeight: FontWeight.bold,
-        //           color: Colors.black,
-        //           fontSize: 18,
-        //         ),
-        //       ),
-        //     ],
-        //   ),
-        // ),
       ),
     );
   }

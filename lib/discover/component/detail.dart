@@ -57,7 +57,6 @@ class DetailsScreen extends StatelessWidget {
             children: <Widget>[
               SizedBox(
                 child: Stack(
-                  fit: StackFit.loose,
                   children: <Widget>[
                     Positioned(
                       child: Container(
@@ -73,9 +72,7 @@ class DetailsScreen extends StatelessWidget {
                     Positioned(
                       top: 24,
                       child: ElevatedButton(
-                        //Button back
                         onPressed: () {},
-                        //add quay lai trang trc
                         style: ElevatedButton.styleFrom(
                             primary: Colors.grey[50]?.withOpacity(0.5),
                             shape: const CircleBorder()),
@@ -138,38 +135,30 @@ class DetailsScreen extends StatelessWidget {
                       left: 16,
                       child: Row(
                         children: [
-                          Positioned(
-                            bottom: 14,
-                            left: 16, //hello puppy // hi baby kiss you
-
-                            child: Container(
-                              width: 64,
-                              height: 64,
-                              decoration: BoxDecoration(
-                                border:
-                                    Border.all(color: Colors.white, width: 1),
-                                image: DecorationImage(
-                                  image: AssetImage(product.shopavatar),
-                                  fit: BoxFit.fill,
-                                ),
-                                shape: BoxShape.circle,
+                          Container(
+                            width: 64,
+                            height: 64,
+                            decoration: BoxDecoration(
+                              border: Border.all(color: Colors.white, width: 1),
+                              image: DecorationImage(
+                                image: AssetImage(product.shopavatar),
+                                fit: BoxFit.fill,
                               ),
+                              shape: BoxShape.circle,
                             ),
                           ),
-                          Positioned(
-                            child: FittedBox(
-                              fit: BoxFit.scaleDown,
-                              alignment: Alignment.centerLeft,
-                              child: Padding(
-                                padding: const EdgeInsets.only(left: 16.0),
-                                child: Text(
-                                  //Text Tên shop Tiêu đề title
-                                  product.title,
-                                  style: const TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.white,
-                                      fontSize: 20),
-                                ),
+                          FittedBox(
+                            fit: BoxFit.scaleDown,
+                            alignment: Alignment.centerLeft,
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 16.0),
+                              child: Text(
+                                //Text Tên shop Tiêu đề title
+                                product.title,
+                                style: const TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.white,
+                                    fontSize: 20),
                               ),
                             ),
                           ),
@@ -243,7 +232,7 @@ class DetailsScreen extends StatelessWidget {
                     Row(children: [
                       const Padding(
                         padding: EdgeInsets.only(right: 6.0),
-                        child: Icon(
+                        child: const Icon(
                           Icons.access_time_rounded,
                           size: 20,
                         ),
@@ -268,14 +257,14 @@ class DetailsScreen extends StatelessWidget {
                 // height: MediaQuery.of(context).size.height,
                 // width: MediaQuery.of(context).size.width,
                 decoration: const BoxDecoration(
-                  border: Border(
+                  border: const Border(
                     top: BorderSide(width: 0.5, color: Colors.black26),
                     bottom: BorderSide(width: 0.5, color: Colors.black26),
                   ),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),
-                  child: Expanded(
+                  child: Container(
                     child: Row(children: [
                       const Icon(
                         Icons.pin_drop_outlined,
@@ -315,35 +304,29 @@ class DetailsScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Expanded(
-                      child: Row(children: [
-                        Expanded(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                              Padding(
-                                padding: EdgeInsets.only(bottom: 8.0),
-                                child: Text('Bạn nhận được gì',
-                                    style: TextStyle(
-                                        fontSize: 17,
-                                        fontWeight: FontWeight.w500)),
-                              ),
-                              SizedBox(
-                                height: 4,
-                              ),
-                              Text(
-                                'Quán ăn lâu đời Bún bò nam bộ truyền thống, Quán ăn lâu đời Bún bò nam bộ truyền thống, Quán ăn lâu đời Bún bò nam bộ truyền thống',
-                                maxLines: 5,
-                                style: TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.normal),
-                              ),
+                      child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [
+                            Padding(
+                              padding: EdgeInsets.only(bottom: 8.0),
+                              child: Text('Bạn nhận được gì',
+                                  style: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.w500)),
+                            ),
+                            SizedBox(
+                              height: 4,
+                            ),
+                            Text(
+                              'Quán ăn lâu đời Bún bò nam bộ truyền thống, Quán ăn lâu đời Bún bò nam bộ truyền thống, Quán ăn lâu đời Bún bò nam bộ truyền thống',
+                              maxLines: 5,
+                              style: TextStyle(
+                                  fontSize: 14, fontWeight: FontWeight.normal),
+                            ),
 
-                              //thẻ phân loại vd: meal,
-                            ],
-                          ),
-                        ),
-                      ]),
+                            //thẻ phân loại vd: meal,
+                          ]),
                     ),
                     const Icon(
                       Icons.keyboard_arrow_right_rounded,
@@ -388,51 +371,53 @@ class DetailsScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  children: <Widget>[
-                    Text(
-                      "Mọi người đang nói gì".toUpperCase(),
-                      textDirection: TextDirection.ltr,
-                      style: const TextStyle(
-                          color: Colors.black,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 16.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: const <Widget>[
-                          Padding(
-                            padding: EdgeInsets.only(right: 8.0),
-                            child: Icon(
-                              Icons.star_rate_rounded,
-                              color: Colors.orange,
-                              size: 24.0,
-                            ),
-                          ),
-                          Text(
-                            //code chưa có data code
-                            "3.5 / 5",
-                            style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 26,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ],
+              Container(
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Column(
+                    children: <Widget>[
+                      Text(
+                        "Mọi người đang nói gì".toUpperCase(),
+                        textDirection: TextDirection.ltr,
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold),
                       ),
-                    ),
-                  ],
+                      Padding(
+                        padding: const EdgeInsets.only(top: 16.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: const <Widget>[
+                            Padding(
+                              padding: EdgeInsets.only(right: 8.0),
+                              child: Icon(
+                                Icons.star_rate_rounded,
+                                color: Colors.orange,
+                                size: 24.0,
+                              ),
+                            ),
+                            Text(
+                              //code chưa có data code
+                              "3.5 / 5",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 26,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               Container(
-                padding: const EdgeInsets.only(top: 16),
+                padding: EdgeInsets.only(top: 16),
                 margin: const EdgeInsets.only(
                     left: 60, right: 60, bottom: 16, top: 16),
                 decoration: const BoxDecoration(
-                  border: Border(
+                  border: const Border(
                     top: BorderSide(width: 0.5, color: Colors.black26),
                   ),
                 ),
@@ -455,8 +440,7 @@ class DetailsScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Padding(
-                            padding:
-                                const EdgeInsets.only(right: 20.0, left: 6),
+                            padding: EdgeInsets.only(right: 20.0, left: 6),
                             child: Column(
                               children: const [
                                 Padding(
@@ -523,7 +507,7 @@ class DetailsScreen extends StatelessWidget {
               Container(
                 margin:
                     const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   border: Border(
                     top: BorderSide(width: 0.5, color: Colors.black26),
                   ),
