@@ -14,7 +14,7 @@ class Heo2 extends StatelessWidget {
     return Column(
       children: [
         const SectionTitle(
-          head1: "heo2",
+          head1: "Pick up for breakfast",
         ),
         SingleChildScrollView(
           physics: const BouncingScrollPhysics(

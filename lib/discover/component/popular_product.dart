@@ -16,7 +16,7 @@ class PopularProducts extends StatelessWidget {
       children: [
         // em heo ò ó o 🐥🐤⛱️
         const SectionTitle(
-          head1: "Popular",
+          head1: "Save it before it's too late",
         ),
         SingleChildScrollView(
           physics: const BouncingScrollPhysics(

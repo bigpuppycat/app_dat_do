@@ -36,7 +36,7 @@ class Card1 extends StatelessWidget {
             borderRadius: BorderRadius.circular(15),
             boxShadow: [
               BoxShadow(
-                color: Colors.grey.withOpacity(0.1),
+                color: Colors.grey.withOpacity(0.05),
                 spreadRadius: 0.01,
                 blurRadius: 0.01,
               ),

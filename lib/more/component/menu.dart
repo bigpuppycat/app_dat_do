@@ -10,22 +10,17 @@ class Menu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [
-        SingleChildScrollView(
-          child: Column(
-            children: List.generate(
-              builders.length,
-              (index) => SizedBox(
-                child: Button1(
-                  title: builders[index].title,
-                  icon: builders[index].icon,
-                  onPress: builders[index].onPress,
-                ),
-              ),
-            ),
+      children: List.generate(
+        builders.length,
+        (index) => SizedBox(
+          width: double.infinity,
+          child: Button1(
+            title: builders[index].title,
+            icon: builders[index].icon,
+            onPress: builders[index].onPress,
           ),
-        )
-      ],
+        ),
+      ),
     );
   }
 }

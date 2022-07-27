@@ -14,14 +14,13 @@ class Button1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(6),
-      width: 350,
-      height: 60,
+      padding: const EdgeInsets.only(bottom: 6),
+      width: double.infinity,
+      height: 54,
       child: ElevatedButton.icon(
-        // style: ,
         icon: Icon(
           icon,
-          size: 24,
+          size: 20,
           color: Colors.black,
         ),
         label: Text(
@@ -29,15 +28,13 @@ class Button1 extends StatelessWidget {
           style: const TextStyle(
             fontWeight: FontWeight.bold,
             color: Colors.black,
-            fontSize: 18,
+            fontSize: 16,
           ),
         ),
         onPressed: () {
           Navigator.pushNamed(context, onPress);
         },
-
         style: ButtonStyle(
-          // padding: (5),
           alignment: Alignment.centerLeft,
           backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
