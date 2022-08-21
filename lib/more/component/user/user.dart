@@ -26,6 +26,7 @@ class User extends StatelessWidget {
       ),
       body: SafeArea(
         child: Padding(
+          padding: EdgeInsetsGeometry.infinity,
           child: Align(
             child: Column(
               children: const <Widget>[

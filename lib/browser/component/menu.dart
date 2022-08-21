@@ -26,7 +26,7 @@ class Section extends StatelessWidget {
               child: IconButton(
                 onPressed: () {},
                 icon: Icon(
-                  Icons.save,
+                  Icons.filter_list,
                   color: Colors.green,
                 ), //icon data for elevated button
               ),
@@ -48,7 +48,7 @@ class Section extends StatelessWidget {
               child: IconButton(
                 onPressed: () {},
                 icon: Icon(
-                  Icons.save,
+                  Icons.search,
                   color: Colors.green,
                 ), //icon data for elevated button
               ),

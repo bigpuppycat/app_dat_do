@@ -1,6 +1,6 @@
 # app_dat_do
 
-A new Flutter project.
+Đây là app tiêu dùng đồ ăn còn dư lại của cửa hàng.
 
 ## Getting Started
 
