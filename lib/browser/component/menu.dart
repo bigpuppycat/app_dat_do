@@ -10,6 +10,7 @@ class Section extends StatelessWidget {
         child: Row(
           children: [
             Container(
+              margin: EdgeInsets.only(right: 8),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(8),
@@ -32,6 +33,7 @@ class Section extends StatelessWidget {
               ),
             ),
             Container(
+              margin: EdgeInsets.only(right: 8),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(8),
@@ -54,6 +56,7 @@ class Section extends StatelessWidget {
               ),
             ),
             Container(
+              margin: EdgeInsets.only(right: 8),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
@@ -74,6 +77,7 @@ class Section extends StatelessWidget {
               ),
             ),
             Container(
+              margin: EdgeInsets.only(right: 8),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
@@ -94,6 +98,7 @@ class Section extends StatelessWidget {
               ),
             ),
             Container(
+              margin: EdgeInsets.only(right: 8),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
