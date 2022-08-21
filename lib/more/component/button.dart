@@ -14,6 +14,9 @@ class Button1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12),
+      ),
       padding: const EdgeInsets.only(bottom: 6),
       width: double.infinity,
       height: 54,
@@ -39,7 +42,7 @@ class Button1 extends StatelessWidget {
           backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
             RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(5.0),
+              borderRadius: BorderRadius.circular(10.0),
             ),
           ),
         ),

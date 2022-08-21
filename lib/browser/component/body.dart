@@ -29,6 +29,16 @@ class Body extends StatelessWidget {
               const YourPlace(),
               const TwoButton(),
               const Section(),
+              Container(
+                child: Text(
+                  "sorted by: Nearby",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 14,
+                  ),
+                ),
+                alignment: Alignment.centerLeft,
+              ),
               const YourProduct(),
             ],
           ),

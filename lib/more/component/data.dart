@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'list.dart';
 
 List<MoreBuilder> builders = [
-  MoreBuilder(title: 'Tài khoản', icon: Icons.account_circle, onPress: ''),
+  MoreBuilder(
+    title: 'Tài khoản',
+    icon: Icons.account_circle,
+    onPress: '/User',
+  ),
   MoreBuilder(
     title: 'Đơn hàng',
     icon: Icons.receipt,
