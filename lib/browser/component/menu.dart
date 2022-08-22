@@ -10,6 +10,7 @@ class Section extends StatelessWidget {
         child: Row(
           children: [
             Container(
+              margin: const EdgeInsets.only(right: 8),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(8),
@@ -25,13 +26,14 @@ class Section extends StatelessWidget {
               height: 40,
               child: IconButton(
                 onPressed: () {},
-                icon: Icon(
-                  Icons.save,
+                icon: const Icon(
+                  Icons.filter_list,
                   color: Colors.green,
                 ), //icon data for elevated button
               ),
             ),
             Container(
+              margin: const EdgeInsets.only(right: 8),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(8),
@@ -47,13 +49,14 @@ class Section extends StatelessWidget {
               height: 40,
               child: IconButton(
                 onPressed: () {},
-                icon: Icon(
-                  Icons.save,
+                icon: const Icon(
+                  Icons.search,
                   color: Colors.green,
                 ), //icon data for elevated button
               ),
             ),
             Container(
+              margin: const EdgeInsets.only(right: 8),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
@@ -65,15 +68,16 @@ class Section extends StatelessWidget {
                   ),
                 ],
               ),
-              width: 150,
+              width: 180,
               height: 40,
               child: TextButton(
                 onPressed: () {},
-                child: Text(
-                    "Try:Bread & pastries"), //icon data for elevated button
+                child: const Text(
+                    "Thử: bánh mỳ & bánh kem"), //icon data for elevated button
               ),
             ),
             Container(
+              margin: const EdgeInsets.only(right: 8),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
@@ -85,15 +89,16 @@ class Section extends StatelessWidget {
                   ),
                 ],
               ),
-              width: 150,
+              width: 120,
               height: 40,
               child: TextButton(
                 onPressed: () {},
-                child: Text(
-                    "Try:Bread & pastries"), //icon data for elevated button
+                child:
+                    const Text("Đồ ăn đã nấu"), //icon data for elevated button
               ),
             ),
             Container(
+              margin: const EdgeInsets.only(right: 8),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(10),
@@ -105,12 +110,12 @@ class Section extends StatelessWidget {
                   ),
                 ],
               ),
-              width: 150,
+              width: 160,
               height: 40,
               child: TextButton(
                 onPressed: () {},
-                child: Text(
-                    "Try:Bread & pastries"), //icon data for elevated button
+                child: const Text(
+                    "Nguyên liệu tươi sống"), //icon data for elevated button
               ),
             )
           ],
