@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:app_dat_do/more/component/user/usermenu.dart';
 
-class User extends StatelessWidget {
-  const User({Key? key}) : super(key: key);
-  static String routeName = '/User';
+class userdetail extends StatelessWidget {
+  const userdetail({Key? key}) : super(key: key);
+  static String routeName = '/userdetail';
 
   @override
   Widget build(BuildContext context) {

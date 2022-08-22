@@ -20,7 +20,8 @@ class PopularProducts extends StatelessWidget {
         ),
         SingleChildScrollView(
           physics: const BouncingScrollPhysics(
-              parent: AlwaysScrollableScrollPhysics()),
+            parent: AlwaysScrollableScrollPhysics(),
+          ),
           scrollDirection: Axis.horizontal,
           child: Row(
             children: List.generate(
@@ -38,11 +39,12 @@ class PopularProducts extends StatelessWidget {
                   type: products[index].type,
                   press: () {
                     Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) =>
-                              DetailsScreen(product: products[index]),
-                        ));
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            DetailsScreen(product: products[index]),
+                      ),
+                    );
                   },
                 ),
               ),

@@ -5,7 +5,7 @@ List<MoreBuilder> builders = [
   MoreBuilder(
     title: 'Thông tin cá nhân',
     icon: Icons.account_circle,
-    onPress: '',
+    onPress: '/userdetail',
   ),
   MoreBuilder(
     title: 'Phương thức thanh toán',
