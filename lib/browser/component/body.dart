@@ -30,7 +30,7 @@ class Body extends StatelessWidget {
               const TwoButton(),
               const Section(),
               Container(
-                child: Text(
+                child: const Text(
                   "sorted by: Nearby",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,

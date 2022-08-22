@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'card.dart';
 import 'data.dart';
+import 'package:app_dat_do/browser/component/detail.dart';
 
 class YourProduct extends StatelessWidget {
   const YourProduct({
@@ -29,7 +30,15 @@ class YourProduct extends StatelessWidget {
                   shopcover: products[index].shopcover,
                   title2: products[index].title2,
                   type: products[index].type,
-                  press: () {},
+                  press: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            DetailsScreen(product: products[index]),
+                      ),
+                    );
+                  },
                 ),
               ),
             ),

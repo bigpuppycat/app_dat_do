@@ -159,14 +159,9 @@ class Card1 extends StatelessWidget {
                         right: 10,
                         top: 10,
                         child: SizedBox(
-                            width: 32,
-                            height: 32,
-                            child: FloatingActionButton(
-                              backgroundColor:
-                                  Colors.grey[50]?.withOpacity(0.5),
-                              onPressed: () {},
-                              child: const Icon(Icons.savings_outlined),
-                            )),
+                          width: 32,
+                          height: 32,
+                        ),
                       ),
                       Positioned(
                         top: 42,
