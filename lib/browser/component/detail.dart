@@ -74,7 +74,7 @@ class DetailsScreen extends StatelessWidget {
                       top: 24,
                       child: ElevatedButton(
                         //Button back
-                        onPressed: () {},
+                        onPressed: () => Navigator.of(context).pop(),
                         //add quay lai trang trc
                         style: ElevatedButton.styleFrom(
                             primary: Colors.grey[50]?.withOpacity(0.5),
