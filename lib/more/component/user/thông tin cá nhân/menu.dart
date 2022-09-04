@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'data.dart';
-import 'button.dart';
+import 'package:app_dat_do/more/component/user/thông tin cá nhân/data.dart';
+import 'package:app_dat_do/more/component/user/thông tin cá nhân/button.dart';
 
 class Menu extends StatelessWidget {
   const Menu({

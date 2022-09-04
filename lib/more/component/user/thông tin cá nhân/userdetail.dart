@@ -10,7 +10,7 @@ class userdetail extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Tài khoản',
+          'Thông tin',
           style: TextStyle(
               fontWeight: FontWeight.bold, fontSize: 30, color: Colors.black),
         ),

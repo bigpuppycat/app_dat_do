@@ -30,6 +30,6 @@ List<MoreBuilder> builders = [
   MoreBuilder(
     title: 'Trở lại trang người dùng',
     icon: Icons.beenhere_outlined,
-    onPress: '/Usermenu',
+    onPress: '/userdetail',
   ),
 ];

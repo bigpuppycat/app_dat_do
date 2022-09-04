@@ -37,14 +37,9 @@ class Button1 extends StatelessWidget {
         onPressed: () {
           Navigator.pushNamed(context, onPress);
         },
-        style: ButtonStyle(
+        style: ElevatedButton.styleFrom(
+          primary: Colors.purple,
           alignment: Alignment.centerLeft,
-          backgroundColor: MaterialStateProperty.all<Color>(Colors.white),
-          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-            RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.0),
-            ),
-          ),
         ),
       ),
     );
