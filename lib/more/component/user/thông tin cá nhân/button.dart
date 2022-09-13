@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 
 class Button1 extends StatelessWidget {
-  final IconData icon;
   final String title;
   final String onPress;
 
   const Button1({
     Key? key,
-    required this.icon,
     required this.title,
     required this.onPress,
   }) : super(key: key);
@@ -20,13 +18,8 @@ class Button1 extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 6),
       width: double.infinity,
       height: 54,
-      child: ElevatedButton.icon(
-        icon: Icon(
-          icon,
-          size: 20,
-          color: Colors.black,
-        ),
-        label: Text(
+      child: ElevatedButton(
+        child: Text(
           title,
           style: const TextStyle(
             fontWeight: FontWeight.bold,

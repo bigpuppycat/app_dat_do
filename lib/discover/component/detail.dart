@@ -335,8 +335,9 @@ class DetailsScreen extends StatelessWidget {
                                 'Quán ăn lâu đời Bún bò nam bộ truyền thống, Quán ăn lâu đời Bún bò nam bộ truyền thống, Quán ăn lâu đời Bún bò nam bộ truyền thống',
                                 maxLines: 5,
                                 style: TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.normal),
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.normal,
+                                ),
                               ),
 
                               //thẻ phân loại vd: meal,
