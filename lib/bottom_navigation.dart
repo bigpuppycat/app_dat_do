@@ -19,7 +19,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
   final _pageOptions = [
     const Discover(),
     const Browse(),
-    const Favourite(),
+    Favourite(),
     const More(),
   ];
 

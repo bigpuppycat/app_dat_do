@@ -1,0 +1,40 @@
+import 'list2.dart';
+
+List<Product> products = [
+  Product(
+    conlai: '5+ left',
+    shopavatar: 'assets/image/shop-image (1).jpeg',
+    shopcover: 'assets/image/shop-image (1).jpeg',
+    shopname: 'Erin McKennas Bakery NYC',
+    foodytail: 'Gluten-Free',
+    date: 'Pick up tomorrow: 05:00 - 06:30',
+    rate: '4.7',
+    distance: '0.9 mi',
+    preprice: '18.00',
+    price: '5.99',
+  ),
+  Product(
+    conlai: '2 left',
+    shopavatar: 'assets/image/shop-image (2).jpg',
+    shopcover: 'assets/image/shop-image (2).jpg',
+    shopname: 'Rays Pizza & Bagel Cafe',
+    foodytail: 'Surprise Bag',
+    date: 'Pick up today: 12:00 - 16:00',
+    rate: '3.4',
+    distance: '1.4 mi',
+    preprice: '15.00',
+    price: '4.99',
+  ),
+  Product(
+    conlai: '5+ left',
+    shopavatar: 'assets/image/shop-image (3).jpeg',
+    shopcover: 'assets/image/shop-image (3).jpeg',
+    shopname: 'Unregular Pizza',
+    foodytail: 'Surprise Bag',
+    date: 'Pick up today: 7:30 - 8:00',
+    rate: '4.6',
+    distance: '1.7 mi',
+    preprice: '15.00',
+    price: '5.99',
+  ),
+];

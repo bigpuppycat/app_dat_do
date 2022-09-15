@@ -13,9 +13,7 @@ class YourProduct extends StatelessWidget {
     return Column(
       children: [
         SingleChildScrollView(
-          physics: const NeverScrollableScrollPhysics(
-              parent: AlwaysScrollableScrollPhysics()),
-          scrollDirection: Axis.vertical,
+          // scrollDirection: Axis.vertical,
           child: Column(
             children: List.generate(
               products.length,
