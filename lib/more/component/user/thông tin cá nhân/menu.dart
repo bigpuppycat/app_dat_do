@@ -18,7 +18,6 @@ class Menu extends StatelessWidget {
               (index) => SizedBox(
                 child: Button1(
                   title: builders[index].title,
-                  icon: builders[index].icon,
                   onPress: builders[index].onPress,
                 ),
               ),

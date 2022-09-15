@@ -8,14 +8,15 @@ class userdetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: const Text(
-          'Thông tin',
+          'Hồ sơ',
           style: TextStyle(
               fontWeight: FontWeight.bold, fontSize: 30, color: Colors.black),
         ),
         toolbarHeight: 40,
-        backgroundColor: const Color(0xFFFCF9F2),
+        backgroundColor: Colors.white,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
