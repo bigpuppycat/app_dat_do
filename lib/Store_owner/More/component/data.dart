@@ -8,11 +8,6 @@ List<MoreBuilder> builders = [
     onPress: '',
   ),
   MoreBuilder(
-    title: 'Đơn',
-    icon: Icons.receipt,
-    onPress: '',
-  ),
-  MoreBuilder(
     title: 'Blog',
     icon: Icons.newspaper,
     onPress: '',

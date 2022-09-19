@@ -15,7 +15,7 @@ List<MoreBuilder> builders = [
   MoreBuilder(
     title: 'Hỗ trợ',
     icon: Icons.call,
-    onPress: '',
+    onPress: '/hotro',
   ),
   MoreBuilder(
     title: 'Blog',

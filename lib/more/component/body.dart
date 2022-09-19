@@ -52,7 +52,9 @@ class Body extends StatelessWidget {
                 child: Text('để giảm đồ ăn lãng phí.'),
               ),
               TextButton.icon(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/Dangki');
+                },
                 // label: const Text('Tìm hiểu'),
                 // icon: const Icon(Icons.keyboard_arrow_right),
                 label: const Icon(Icons.keyboard_arrow_right),

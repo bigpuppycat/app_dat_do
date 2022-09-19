@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'component/body.dart';
 
 class Mystore extends StatelessWidget {
+  static String routeName = '/Mystore';
   const Mystore({
     Key? key,
   }) : super(key: key);

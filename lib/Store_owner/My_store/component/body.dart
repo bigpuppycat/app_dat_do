@@ -92,7 +92,9 @@ class Body extends StatelessWidget {
                 ButtonBuilder(
                     title: 'Thêm miêu tả về cửa hàng của bạn',
                     subtitle: 'Kể một chút về cửa hàng của bạn',
-                    onPress: () {}),
+                    onPress: () {
+                      Navigator.pushNamed(context, '/Detail');
+                    }),
                 ButtonBuilder(
                     title: 'Thêm thông tin gói đồ ăn',
                     subtitle:
