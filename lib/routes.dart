@@ -1,3 +1,4 @@
+import 'package:app_dat_do/SignIn/widgettree.dart';
 import 'package:app_dat_do/Store_owner/My_store/mystore.dart';
 import 'package:app_dat_do/more/component/user/user.dart';
 import 'package:flutter/widgets.dart';
@@ -37,4 +38,5 @@ final Map<String, WidgetBuilder> routes = {
   email.routeName: (context) => email(),
   Detail.routeName: (context) => Detail(),
   Mystore.routeName: (context) => Mystore(),
+  WidgetTree.routeName: (context) => WidgetTree(),
 };
