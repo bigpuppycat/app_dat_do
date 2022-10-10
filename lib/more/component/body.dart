@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import '../../phone/login_screen.dart';
 import 'menu.dart';
 
 class Body extends StatelessWidget {
-  const Body({Key? key}) : super(key: key);
+  final _auth = FirebaseAuth.instance;
+  Body({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +28,14 @@ class Body extends StatelessWidget {
               const SizedBox(
                 height: 16,
               ),
-
+              FloatingActionButton(
+                onPressed: () async {
+                  await _auth.signOut();
+                  Navigator.pushReplacement(context,
+                      MaterialPageRoute(builder: (context) => LoginScreen()));
+                },
+                child: Icon(Icons.logout),
+              ),
               //butoon menu
 
               const Menu(),

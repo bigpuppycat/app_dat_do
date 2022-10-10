@@ -1,6 +1,7 @@
 import 'package:app_dat_do/SignIn/widgettree.dart';
 import 'package:app_dat_do/Store_owner/My_store/mystore.dart';
 import 'package:app_dat_do/more/component/user/user.dart';
+import 'package:app_dat_do/phone/main.dart';
 import 'package:flutter/widgets.dart';
 import 'Store_owner/bottom_navigation_mystore.dart';
 import 'Store_owner/detail/detail.dart';
@@ -8,6 +9,7 @@ import 'bottom_navigation.dart';
 import 'log_in/signin.dart';
 import 'package:app_dat_do/more/component/user/thông tin cá nhân/userdetail.dart';
 
+import 'more/component/dangbai/user.dart';
 import 'more/component/dangkicuahang/Recommend/body.dart';
 import 'more/component/dangkicuahang/SignStore/component/email.dart';
 import 'more/component/dangkicuahang/SignStore/component/sodienthoai.dart';
@@ -39,4 +41,6 @@ final Map<String, WidgetBuilder> routes = {
   Detail.routeName: (context) => Detail(),
   Mystore.routeName: (context) => Mystore(),
   WidgetTree.routeName: (context) => WidgetTree(),
+  InitializerWidget.routeName: (context) => InitializerWidget(),
+  Dangbai.routeName: (context) => Dangbai(),
 };

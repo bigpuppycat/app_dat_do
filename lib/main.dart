@@ -1,4 +1,5 @@
 import 'package:app_dat_do/SignIn/widgettree.dart';
+import 'package:app_dat_do/phone/main.dart';
 import 'package:flutter/material.dart';
 import 'bottom_navigation.dart';
 import 'routes.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       theme: theme(),
       // home: SplashScreen(),
       // We use routeName so that we dont need to remember the name
-      initialRoute: WidgetTree.routeName,
+      initialRoute: InitializerWidget.routeName,
       routes: routes,
     );
   }

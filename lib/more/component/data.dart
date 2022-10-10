@@ -32,4 +32,9 @@ List<MoreBuilder> builders = [
     icon: Icons.beenhere_outlined,
     onPress: '/Ownermenu',
   ),
+  MoreBuilder(
+    title: 'Dang bai',
+    icon: Icons.newspaper,
+    onPress: '/Dangbai',
+  ),
 ];
