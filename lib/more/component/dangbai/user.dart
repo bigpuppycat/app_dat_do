@@ -1,6 +1,9 @@
+import 'dart:ffi';
+
 import 'package:sizer/sizer.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'read.dart';
 
 class Dangbai extends StatelessWidget {
   final LoaiThucPham = TextEditingController();
@@ -8,9 +11,9 @@ class Dangbai extends StatelessWidget {
   final ThoiGianDenLay = TextEditingController();
   final Gia = TextEditingController();
   final GiaGiam = TextEditingController();
+  String ConvertUser = GetUserName('dem').toString();
   Dangbai({Key? key}) : super(key: key);
   static String routeName = '/Dangbai';
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,12 +80,16 @@ class Dangbai extends StatelessWidget {
                     Gia: Gia.text,
                     GiaGiam: GiaGiam.text,
                   );
-                  creatThongTinCard(user);
-                  updateUser();
+                  //creatThongTinCard(user);
                 },
                 child: Text('Create'),
               ),
-              StreamBuilder<List<ThongTinCard>>(
+              SizedBox(
+                height: 16,
+              ),
+              Text(ConvertUser),
+
+              /*StreamBuilder<List<ThongTinCard>>(
                 stream: readThongTinCards(),
                 builder: (context, snapshot) {
                   if (snapshot.hasError) {
@@ -96,7 +103,7 @@ class Dangbai extends StatelessWidget {
                     return Center(child: CircularProgressIndicator());
                   }
                 },
-              ),
+              ),*/
             ],
           ),
         ),
@@ -118,25 +125,10 @@ class Dangbai extends StatelessWidget {
     await docThongTinCard.set(json);
   }
 
-  Future updateUser() async {
-    late int abc;
+  /* Future updateUser() async {
     final sodem = FirebaseFirestore.instance.collection('chucnang');
-
-    FutureBuilder<DocumentSnapshot>(
-      future: sodem.doc('chucnang').get(),
-      builder: (BuildContext int, AsyncSnapshot<DocumentSnapshot> snapshot) {
-        if (snapshot.connectionState == ConnectionState.done) {
-          Map<String, dynamic> data =
-              snapshot.data!.data() as Map<String, dynamic>;
-          abc = data['dem'];
-          return Text("${data['dem']}");
-        }
-
-        return Text("loading");
-      },
-    );
-    await sodem.doc('dem').update({'thucpham': abc++});
-  }
+    await sodem.doc('dem').update({'thucpham': myInt + 1});
+  }*/
 }
 
 Widget buildThongTinCard(ThongTinCard heo) => ListTile(
