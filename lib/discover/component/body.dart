@@ -20,20 +20,6 @@ class Body extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.only(top: 18.0),
-            child: Container(
-              padding: const EdgeInsets.only(top: 10.0, left: 16),
-              alignment: Alignment.centerLeft,
-              child: const Text(
-                'Khám Phá',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 24,
-                ),
-              ),
-            ),
-          ),
           const SizedBox(
             height: 10,
           ),

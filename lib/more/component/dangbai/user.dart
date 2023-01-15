@@ -1,17 +1,20 @@
-import 'dart:ffi';
+import 'dart:io';
 
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:sizer/sizer.dart';
+import 'package:file_picker/file_picker.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'read.dart';
 
 class Dangbai extends StatelessWidget {
+  PlatformFile? pickedFile;
+  UploadTask? uploadTask;
   final LoaiThucPham = TextEditingController();
   final SoLuong = TextEditingController();
   final ThoiGianDenLay = TextEditingController();
   final Gia = TextEditingController();
   final GiaGiam = TextEditingController();
-  String ConvertUser = GetUserName('dem').toString();
+
   Dangbai({Key? key}) : super(key: key);
   static String routeName = '/Dangbai';
   @override
@@ -30,7 +33,7 @@ class Dangbai extends StatelessWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
-      body: Container(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.only(left: 12.0, right: 12.0),
         child: Align(
           child: Column(
@@ -84,12 +87,29 @@ class Dangbai extends StatelessWidget {
                 },
                 child: Text('Create'),
               ),
-              SizedBox(
-                height: 16,
+              if (pickedFile != null)
+                Expanded(
+                  child: Container(
+                    color: Colors.blue[100],
+                    child: Image.file(
+                      File(pickedFile!.path!),
+                      width: double.infinity,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              const SizedBox(
+                height: 32,
               ),
-              Text(ConvertUser),
-
-              /*StreamBuilder<List<ThongTinCard>>(
+              ElevatedButton(
+                onPressed: selectFile,
+                child: Text('Select File'),
+              ),
+              ElevatedButton(
+                onPressed: uploadFile,
+                child: Text('Upload File'),
+              ),
+              StreamBuilder<List<ThongTinCard>>(
                 stream: readThongTinCards(),
                 builder: (context, snapshot) {
                   if (snapshot.hasError) {
@@ -97,18 +117,36 @@ class Dangbai extends StatelessWidget {
                   } else if (snapshot.hasData) {
                     final users = snapshot.data!;
                     return ListView(
+                      shrinkWrap: true,
                       children: users.map(buildThongTinCard).toList(),
                     );
                   } else {
                     return Center(child: CircularProgressIndicator());
                   }
                 },
-              ),*/
+              ),
             ],
           ),
         ),
       ),
     );
+  }
+
+  Future selectFile() async {
+    final result = await FilePicker.platform.pickFiles();
+    if (result == null) return;
+
+    setState(() {
+      pickedFile = result.files.first;
+    });
+  }
+
+  Future uploadFile() async {
+    final pathInFirestore = 'files/${pickedFile?.name}';
+    File file = File(pickedFile!.path!);
+
+    final ref = FirebaseStorage.instance.ref().child(pathInFirestore);
+    ref.putFile(file);
   }
 
   Stream<List<ThongTinCard>> readThongTinCards() => FirebaseFirestore.instance
@@ -125,23 +163,20 @@ class Dangbai extends StatelessWidget {
     await docThongTinCard.set(json);
   }
 
-  /* Future updateUser() async {
-    final sodem = FirebaseFirestore.instance.collection('chucnang');
-    await sodem.doc('dem').update({'thucpham': myInt + 1});
-  }*/
+  void setState(Null Function() param0) {}
 }
 
-Widget buildThongTinCard(ThongTinCard heo) => ListTile(
-    leading: Text('${heo.Gia}'),
-    title: Text(heo.GiaGiam),
-    subtitle: Text(heo.LoaiThucPham));
+Widget buildThongTinCard(ThongTinCard user) => ListTile(
+    leading: Text(user.Gia),
+    title: Text(user.GiaGiam),
+    subtitle: Text(user.LoaiThucPham));
 
 // Widget buildThongTinCard(ThongTinCard user) {
 //   return Padding(
 //     padding: EdgeInsets.only(bottom: 20),
 //     child: Container(
-//       height: 0.25.h,
-//       width: 0.9.w,
+//       height: 200,
+//       width: 300,
 //       decoration: BoxDecoration(
 //         color: Color.fromARGB(255, 255, 255, 255),
 //         borderRadius: BorderRadius.circular(20),
@@ -157,8 +192,8 @@ Widget buildThongTinCard(ThongTinCard heo) => ListTile(
 //         children: [
 //           Positioned(
 //             child: Container(
-//               height: 0.125.h,
-//               width: 0.9.w,
+//               height: 100,
+//               width: 300,
 //               decoration: BoxDecoration(
 //                 borderRadius: BorderRadius.only(
 //                   topLeft: Radius.circular(20),
@@ -172,12 +207,12 @@ Widget buildThongTinCard(ThongTinCard heo) => ListTile(
 //             ),
 //           ),
 //           Positioned(
-//             left: 0.025.w,
-//             top: 0.01.h,
+//             left: 10,
+//             top: 10,
 //             child: Container(
 //               alignment: Alignment.center,
-//               height: 0.03.h,
-//               width: 0.13.w,
+//               height: 20,
+//               width: 20,
 //               decoration: BoxDecoration(
 //                 color: const Color.fromARGB(255, 131, 177, 149),
 //                 borderRadius: BorderRadius.circular(14),
@@ -192,11 +227,11 @@ Widget buildThongTinCard(ThongTinCard heo) => ListTile(
 //             ),
 //           ),
 //           Positioned(
-//             right: 0.025.w,
-//             top: 0.01.h,
+//             right: 020,
+//             top: 20,
 //             child: Container(
-//               height: 0.07.h,
-//               width: 0.07.w,
+//               height: 10,
+//               width: 10,
 //               child: Image.asset(
 //                 'assets/favourite/tim.png',
 //                 fit: BoxFit.fill,
@@ -205,8 +240,8 @@ Widget buildThongTinCard(ThongTinCard heo) => ListTile(
 //           ),
 //           Positioned(
 //             child: Container(
-//               height: 0.125.h,
-//               width: 0.9.w,
+//               height: 100,
+//               width: 300,
 //               decoration: const BoxDecoration(
 //                 color: Colors.white,
 //                 gradient: LinearGradient(
@@ -221,11 +256,11 @@ Widget buildThongTinCard(ThongTinCard heo) => ListTile(
 //             ),
 //           ),
 //           Positioned(
-//             left: 0.025.w,
-//             top: 0.06.h,
+//             left: 20,
+//             top: 20,
 //             child: Container(
-//               height: 0.057.h,
-//               width: 0.057.w,
+//               height: 20,
+//               width: 20,
 //               decoration: BoxDecoration(
 //                 borderRadius: BorderRadius.circular(100),
 //                 image: DecorationImage(
@@ -237,10 +272,10 @@ Widget buildThongTinCard(ThongTinCard heo) => ListTile(
 //             ),
 //           ),
 //           Positioned(
-//             left: 0.16.w,
-//             top: 0.085.h,
+//             left: 20,
+//             top: 20,
 //             child: Container(
-//               height: 0.03.h,
+//               height: 10,
 //               child: Text(
 //                 user.LoaiThucPham,
 //                 style: TextStyle(
@@ -251,11 +286,11 @@ Widget buildThongTinCard(ThongTinCard heo) => ListTile(
 //             ),
 //           ),
 //           Positioned(
-//             left: 0.025.w,
-//             top: 0.135.h,
+//             left: 20,
+//             top: 20,
 //             child: Container(
-//               height: 0.15.h,
-//               width: 1.w,
+//               height: 10,
+//               width: 10,
 //               child: Text(
 //                 'foodytail',
 //                 style: TextStyle(
@@ -266,11 +301,11 @@ Widget buildThongTinCard(ThongTinCard heo) => ListTile(
 //             ),
 //           ),
 //           Positioned(
-//             left: 0.025.w,
-//             top: 0.16.h,
+//             left: 20,
+//             top: 20,
 //             child: Container(
-//               height: 0.15.h,
-//               width: 1.w,
+//               height: 20,
+//               width: 20,
 //               child: Text(
 //                 user.ThoiGianDenLay,
 //                 style: TextStyle(
@@ -281,20 +316,20 @@ Widget buildThongTinCard(ThongTinCard heo) => ListTile(
 //             ),
 //           ),
 //           Positioned(
-//             left: 0.025.w,
-//             bottom: 0.01.h,
+//             left: 20,
+//             bottom: 20,
 //             child: Row(
 //               children: [
 //                 Container(
-//                   height: 0.04.h,
-//                   width: 0.04.w,
+//                   height: 10,
+//                   width: 10,
 //                   child: Image.asset(
 //                     'assets/favourite/sao.png',
 //                     fit: BoxFit.fill,
 //                   ),
 //                 ),
 //                 Container(
-//                   height: 0.03.h,
+//                   height: 10,
 //                   alignment: Alignment.center,
 //                   padding: const EdgeInsets.only(left: 5),
 //                   child: Text(
@@ -306,9 +341,9 @@ Widget buildThongTinCard(ThongTinCard heo) => ListTile(
 //                   ),
 //                 ),
 //                 Container(
-//                   height: 0.03.h,
+//                   height: 10,
 //                   alignment: Alignment.center,
-//                   padding: EdgeInsets.only(left: 0.08.w),
+//                   padding: EdgeInsets.only(left: 010),
 //                   child: Text(
 //                     'distance',
 //                     style: TextStyle(
@@ -321,10 +356,10 @@ Widget buildThongTinCard(ThongTinCard heo) => ListTile(
 //             ),
 //           ),
 //           Positioned(
-//             right: 0.025.w,
-//             bottom: 0.015.h,
+//             right: 20,
+//             bottom: 20,
 //             child: Container(
-//               height: 0.025.h,
+//               height: 20,
 //               child: Text(
 //                 user.GiaGiam,
 //                 style: TextStyle(
@@ -335,10 +370,10 @@ Widget buildThongTinCard(ThongTinCard heo) => ListTile(
 //             ),
 //           ),
 //           Positioned(
-//             right: 0.025.w,
-//             bottom: 0.036.h,
+//             right: 20,
+//             bottom: 20,
 //             child: Container(
-//               height: 0.025.h,
+//               height: 20,
 //               child: Text(
 //                 user.Gia,
 //                 style: TextStyle(

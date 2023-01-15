@@ -21,6 +21,7 @@ class _MyStatefulWidgetState extends State<BottomNavigationmystore> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        appBar: null,
         body: _pageOptions[selectedPage],
         bottomNavigationBar: BottomNavigationBar(
           type: BottomNavigationBarType.fixed,

@@ -12,7 +12,7 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return Container(
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 18.0, horizontal: 18),
         child: SingleChildScrollView(
