@@ -14,7 +14,7 @@ class Join extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text(
+        title: Text(
           'Hồ sơ',
           style: TextStyle(
               fontWeight: FontWeight.bold, fontSize: 30, color: Colors.black),
@@ -22,17 +22,17 @@ class Join extends StatelessWidget {
         toolbarHeight: 40,
         backgroundColor: Colors.white,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.black),
+          icon: Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
       body: Container(
-        padding: const EdgeInsets.only(left: 12.0, right: 12.0),
+        padding: EdgeInsets.only(left: 0.033 * width, right: 0.033 * width),
         child: Align(
           child: Column(
-            children: const <Widget>[
+            children: <Widget>[
               SizedBox(
-                height: 16,
+                height: 0.02 * height,
               ),
               Menu(),
             ],

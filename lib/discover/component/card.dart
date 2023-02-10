@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Card1 extends StatelessWidget {
+  var size, h, w;
   final String shopavatar,
       shopcover,
       title,
@@ -12,7 +13,7 @@ class Card1 extends StatelessWidget {
       price;
 
   final VoidCallback press;
-  const Card1({
+  Card1({
     Key? key,
     required this.date,
     required this.shopcover,
@@ -28,10 +29,13 @@ class Card1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    size = MediaQuery.of(context).size;
+    h = size.height;
+    w = size.width;
     return GestureDetector(
       onTap: press,
       child: Padding(
-        padding: const EdgeInsets.only(left: 14, bottom: 18.0),
+        padding: EdgeInsets.only(left: 0.038, bottom: 0.023 * h),
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
@@ -46,14 +50,14 @@ class Card1 extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 SizedBox(
-                  height: 180.0,
-                  width: 280.0,
+                  height: 0.23 * h,
+                  width: 0.765 * w,
                   child: Stack(
                     children: <Widget>[
                       Positioned(
                         child: Container(
-                          height: 100.0,
-                          width: 300,
+                          height: 0.128 * h,
+                          width: 0.82 * w,
                           decoration: BoxDecoration(
                             image: DecorationImage(
                               image: AssetImage(shopcover),
@@ -67,8 +71,8 @@ class Card1 extends StatelessWidget {
                       // gradient gradient
                       Positioned(
                         child: Container(
-                          height: 100.0,
-                          decoration: const BoxDecoration(
+                          height: 0.128 * h,
+                          decoration: BoxDecoration(
                             color: Colors.white,
                             gradient: LinearGradient(
                               begin: FractionalOffset.center,
@@ -82,15 +86,15 @@ class Card1 extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                        top: 70.0,
-                        left: 70.0,
-                        right: 10.0,
+                        top: 0.089 * h,
+                        left: 0.191 * w,
+                        right: 0.027 * w,
                         child: FittedBox(
                           fit: BoxFit.scaleDown,
                           alignment: Alignment.centerLeft,
                           child: Text(
                             title,
-                            style: const TextStyle(
+                            style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
                                 fontSize: 20),
@@ -98,12 +102,12 @@ class Card1 extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                        top: 106.0,
-                        left: 10.0,
-                        right: 10.0,
+                        top: 0.135 * h,
+                        left: 0.027 * w,
+                        right: 0.027 * w,
                         child: Text(
                           type,
-                          style: const TextStyle(
+                          style: TextStyle(
                             color: Colors.black,
                             fontSize: 12.0,
                             fontWeight: FontWeight.bold,
@@ -111,12 +115,12 @@ class Card1 extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                        top: 122.0,
-                        left: 10.0,
-                        right: 10.0,
+                        top: 0.156 * h,
+                        left: 0.027 * w,
+                        right: 0.027 * w,
                         child: Text(
                           date,
-                          style: const TextStyle(
+                          style: TextStyle(
                             color: Colors.black,
                             fontSize: 14.0,
                             fontWeight: FontWeight.w300,
@@ -124,13 +128,13 @@ class Card1 extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                        bottom: 10.0,
-                        left: 10.0,
-                        right: 10.0,
+                        bottom: 0.013 * h,
+                        left: 0.027 * w,
+                        right: 0.027 * w,
                         child: Text(
                           distance,
                           // Optional params to try:
-                          style: const TextStyle(
+                          style: TextStyle(
                             color: Colors.black,
                             fontSize: 14.0,
                             fontWeight: FontWeight.bold,
@@ -138,12 +142,12 @@ class Card1 extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                        bottom: 10.0,
-                        right: 10.0,
+                        bottom: 0.013 * h,
+                        right: 0.027 * w,
                         child: Text(
                           price,
                           // Optional params to try:
-                          style: const TextStyle(
+                          style: TextStyle(
                             color: Colors.black,
                             fontSize: 17.0,
                             fontWeight: FontWeight.w900,
@@ -158,19 +162,19 @@ class Card1 extends StatelessWidget {
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
                               primary: Colors.grey[50]?.withOpacity(0.3),
-                              shape: const CircleBorder()),
-                          child: const FittedBox(
+                              shape: CircleBorder()),
+                          child: FittedBox(
                               fit: BoxFit.fitWidth,
                               child: Icon(Icons.savings_outlined, size: 18)),
                         ),
                       ),
 
                       Positioned(
-                        top: 42,
-                        left: 10,
+                        top: 0.054 * h,
+                        left: 0.027 * w,
                         child: Container(
-                          width: 50,
-                          height: 50,
+                          width: 0.137 * w,
+                          height: 0.064 * h,
                           decoration: BoxDecoration(
                             border: Border.all(color: Colors.white, width: 1),
                             image: DecorationImage(

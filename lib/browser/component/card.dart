@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Card1 extends StatelessWidget {
+  var size, h, w;
   final String shopavatar,
       shopcover,
       title,
@@ -12,7 +13,7 @@ class Card1 extends StatelessWidget {
       price;
 
   final VoidCallback press;
-  const Card1({
+  Card1({
     Key? key,
     required this.date,
     required this.shopcover,
@@ -28,10 +29,14 @@ class Card1 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    size = MediaQuery.of(context).size;
+    h = size.height;
+    w = size.width;
+
     return GestureDetector(
         onTap: press,
         child: Container(
-          padding: const EdgeInsets.symmetric(vertical: 4),
+          padding: EdgeInsets.symmetric(vertical: 0.011 * h),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
             boxShadow: [
@@ -50,13 +55,13 @@ class Card1 extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 SizedBox(
-                  height: 180.0,
+                  height: 0.23 * h,
                   width: double.infinity,
                   child: Stack(
                     children: <Widget>[
                       Positioned(
                         child: Container(
-                          height: 100.0,
+                          height: 0.128 * h,
                           // width: 300,
                           decoration: BoxDecoration(
                             image: DecorationImage(
@@ -71,8 +76,8 @@ class Card1 extends StatelessWidget {
                       // gradient gradient
                       Positioned(
                         child: Container(
-                          height: 100.0,
-                          decoration: const BoxDecoration(
+                          height: 0.128 * h,
+                          decoration: BoxDecoration(
                             color: Colors.white,
                             gradient: LinearGradient(
                               begin: FractionalOffset.center,
@@ -86,15 +91,15 @@ class Card1 extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                        top: 70.0,
-                        left: 70.0,
-                        right: 10.0,
+                        top: 0.089 * h,
+                        left: 0.191 * w,
+                        right: 0.027 * w,
                         child: FittedBox(
                           fit: BoxFit.scaleDown,
                           alignment: Alignment.centerLeft,
                           child: Text(
                             title,
-                            style: const TextStyle(
+                            style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
                                 fontSize: 20),
@@ -102,12 +107,12 @@ class Card1 extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                        top: 106.0,
-                        left: 10.0,
-                        right: 10.0,
+                        top: 0.135 * h,
+                        left: 0.027 * w,
+                        right: 0.027 * w,
                         child: Text(
                           type,
-                          style: const TextStyle(
+                          style: TextStyle(
                             color: Colors.black,
                             fontSize: 12.0,
                             fontWeight: FontWeight.bold,
@@ -115,13 +120,13 @@ class Card1 extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                        top: 122.0,
-                        left: 10.0,
-                        right: 10.0,
+                        top: 0.156 * h,
+                        left: 0.027 * w,
+                        right: 0.027 * w,
                         child: Text(
                           date,
                           // Optional params to try:
-                          style: const TextStyle(
+                          style: TextStyle(
                             color: Colors.black,
                             fontSize: 14.0,
                             fontWeight: FontWeight.w300,
@@ -129,13 +134,13 @@ class Card1 extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                        bottom: 10.0,
-                        left: 10.0,
-                        right: 10.0,
+                        bottom: 0.027 * w,
+                        left: 0.027 * w,
+                        right: 0.027 * w,
                         child: Text(
                           distance,
                           // Optional params to try:
-                          style: const TextStyle(
+                          style: TextStyle(
                             color: Colors.black,
                             fontSize: 14.0,
                             fontWeight: FontWeight.bold,
@@ -143,12 +148,12 @@ class Card1 extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                        bottom: 10.0,
-                        right: 10.0,
+                        bottom: 0.027 * w,
+                        right: 0.027 * w,
                         child: Text(
                           price,
                           // Optional params to try:
-                          style: const TextStyle(
+                          style: TextStyle(
                             color: Colors.black,
                             fontSize: 17.0,
                             fontWeight: FontWeight.w900,
@@ -156,19 +161,19 @@ class Card1 extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                        right: 10,
-                        top: 10,
+                        right: 0.027 * w,
+                        top: 0.027 * w,
                         child: SizedBox(
-                          width: 32,
-                          height: 32,
+                          width: 0.087 * w,
+                          height: 0.041 * h,
                         ),
                       ),
                       Positioned(
-                        top: 42,
-                        left: 10,
+                        top: 0.054 * h,
+                        left: 0.027 * w,
                         child: Container(
-                          width: 50,
-                          height: 50,
+                          width: 0.137 * w,
+                          height: 0.064 * h,
                           decoration: BoxDecoration(
                             border: Border.all(color: Colors.white, width: 1),
                             image: DecorationImage(

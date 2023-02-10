@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class SectionTitle extends StatelessWidget {
-  const SectionTitle({
+  var size, h, w;
+  SectionTitle({
     Key? key,
     required this.head1,
   }) : super(key: key);
@@ -9,21 +10,24 @@ class SectionTitle extends StatelessWidget {
 //em pương cũng ở đây.
   @override
   Widget build(BuildContext context) {
+    size = MediaQuery.of(context).size;
+    h = size.height;
+    w = size.width;
     return Row(
       crossAxisAlignment: CrossAxisAlignment.end,
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       // crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         Padding(
-          padding: const EdgeInsets.only(left: 18.0, bottom: 16),
+          padding: EdgeInsets.only(left: 0.049 * w, bottom: 0.02 * h),
           child: Text(
             head1,
-            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w900),
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900),
           ),
         ),
         TextButton(
           onPressed: () {},
-          child: Row(children: const [
+          child: Row(children: [
             Text(
               'Xem thêm',
               style: TextStyle(

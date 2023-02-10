@@ -30,7 +30,7 @@ class Recommend extends StatelessWidget {
         child: Column(
           children: <Widget>[
             SizedBox(
-              height: 16,
+              height: 0.02 * height,
             ),
             Container(
               padding: EdgeInsets.only(left: 15, right: 15),
@@ -38,7 +38,7 @@ class Recommend extends StatelessWidget {
               child: Column(
                 children: [
                   SizedBox(
-                    height: 15,
+                    height: 0.019 * height,
                     width: width * 0.9,
                   ),
                   Container(
@@ -53,7 +53,7 @@ class Recommend extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 15,
+                    height: 0.019 * height,
                   ),
                   Text(
                     'Know a store youd like to see on Too Good To Go? Let us know about it below',
@@ -72,7 +72,7 @@ class Recommend extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 15,
+              height: 0.019 * height,
               width: width * 0.9,
             ),
             Container(
@@ -87,7 +87,7 @@ class Recommend extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 15,
+              height: 0.019 * height,
               width: width * 0.9,
             ),
             Container(
@@ -126,7 +126,7 @@ class Recommend extends StatelessWidget {
                   borderRadius: BorderRadius.circular(30),
                 ),
                 padding: EdgeInsets.symmetric(
-                    vertical: 30, horizontal: width * 0.35),
+                    vertical: 0.038 * height, horizontal: width * 0.35),
               ),
               onPressed: () {
                 Navigator.pushNamed(context, '');

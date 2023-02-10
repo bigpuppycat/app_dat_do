@@ -17,12 +17,4 @@ List<MoreBuilder> builders = [
     title: 'Hỗ trợ',
     onPress: '',
   ),
-  MoreBuilder(
-    title: 'Điều khoản',
-    onPress: '',
-  ),
-  MoreBuilder(
-    title: 'Trở lại trang người dùng',
-    onPress: '/userdetail',
-  ),
 ];

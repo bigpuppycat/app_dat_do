@@ -8,6 +8,6 @@ class Browse extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return const Body();
+    return Body();
   }
 }

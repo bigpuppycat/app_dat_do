@@ -1,19 +1,23 @@
 import 'package:flutter/material.dart';
 
 class YourPlace extends StatelessWidget {
-  const YourPlace({
+  var size, h, w;
+  YourPlace({
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    size = MediaQuery.of(context).size;
+    h = size.height;
+    w = size.width;
     return Container(
-      padding: EdgeInsets.only(left: 16),
+      padding: EdgeInsets.only(left: 0.044 * w),
       alignment: Alignment.centerLeft,
       child: Column(
         children: <Widget>[
           RichText(
-            text: const TextSpan(
+            text: TextSpan(
               children: [
                 WidgetSpan(
                   child: Icon(
@@ -32,8 +36,8 @@ class YourPlace extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(height: 4),
-          const Text(
+          SizedBox(height: 0.005 * h),
+          Text(
             'trong vòng 5km',
             style: TextStyle(
               fontSize: 12,
@@ -43,15 +47,15 @@ class YourPlace extends StatelessWidget {
       ),
     );
     Padding(
-      padding: const EdgeInsets.only(right: 10.0),
+      padding: EdgeInsets.only(right: 10.0),
       // child: ElevatedButton(
       //     onPressed: () {},
       //     style: ElevatedButton.styleFrom(
-      //       fixedSize: const Size(80, 0),
+      //       fixedSize:  Size(80, 0),
       //       shape: RoundedRectangleBorder(
       //         borderRadius: BorderRadius.circular(20),
       //       ),
-      //       primary: const Color.fromARGB(54, 108, 108, 108),
+      //       primary:  Color.fromARGB(54, 108, 108, 108),
       //       elevation: 0,
       //       shadowColor: Colors.transparent,
       //     ),

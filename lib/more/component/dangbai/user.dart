@@ -6,6 +6,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class Dangbai extends StatelessWidget {
+  var size, h, w;
   PlatformFile? pickedFile;
   UploadTask? uploadTask;
   final LoaiThucPham = TextEditingController();
@@ -18,22 +19,25 @@ class Dangbai extends StatelessWidget {
   static String routeName = '/Dangbai';
   @override
   Widget build(BuildContext context) {
+    size = MediaQuery.of(context).size;
+    h = size.height;
+    w = size.width;
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
+        title: Text(
           'Tài khoản',
           style: TextStyle(
               fontWeight: FontWeight.bold, fontSize: 30, color: Colors.black),
         ),
         toolbarHeight: 40,
-        backgroundColor: const Color(0xFFFCF9F2),
+        backgroundColor: Color(0xFFFCF9F2),
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.black),
+          icon: Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.only(left: 12.0, right: 12.0),
+        padding: EdgeInsets.only(left: 12.0, right: 12.0),
         child: Align(
           child: Column(
             children: <Widget>[
@@ -82,32 +86,32 @@ class Dangbai extends StatelessWidget {
                     Gia: Gia.text,
                     GiaGiam: GiaGiam.text,
                   );
-                  //creatThongTinCard(user);
+                  creatThongTinCard(user);
                 },
                 child: Text('Create'),
               ),
-              if (pickedFile != null)
-                Expanded(
-                  child: Container(
-                    color: Colors.blue[100],
-                    child: Image.file(
-                      File(pickedFile!.path!),
-                      width: double.infinity,
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-              const SizedBox(
+              // if (pickedFile != null)
+              //   Expanded(
+              //     child: Container(
+              //       color: Colors.blue[100],
+              //       child: Image.file(
+              //         File(pickedFile!.path!),
+              //         width: double.infinity,
+              //         fit: BoxFit.cover,
+              //       ),
+              //     ),
+              //   ),
+              SizedBox(
                 height: 32,
               ),
-              ElevatedButton(
-                onPressed: selectFile,
-                child: Text('Select File'),
-              ),
-              ElevatedButton(
-                onPressed: uploadFile,
-                child: Text('Upload File'),
-              ),
+              // ElevatedButton(
+              //   onPressed: selectFile,
+              //   child: Text('Select File'),
+              // ),
+              // ElevatedButton(
+              //   onPressed: uploadFile,
+              //   child: Text('Upload File'),
+              // ),
               StreamBuilder<List<ThongTinCard>>(
                 stream: readThongTinCards(),
                 builder: (context, snapshot) {
@@ -131,22 +135,22 @@ class Dangbai extends StatelessWidget {
     );
   }
 
-  Future selectFile() async {
-    final result = await FilePicker.platform.pickFiles();
-    if (result == null) return;
+  // Future selectFile() async {
+  //   final result = await FilePicker.platform.pickFiles();
+  //   if (result == null) return;
 
-    setState(() {
-      pickedFile = result.files.first;
-    });
-  }
+  //   setState(() {
+  //     pickedFile = result.files.first;
+  //   });
+  // }
 
-  Future uploadFile() async {
-    final pathInFirestore = 'files/${pickedFile?.name}';
-    File file = File(pickedFile!.path!);
+  // Future uploadFile() async {
+  //   final pathInFirestore = 'files/${pickedFile?.name}';
+  //   File file = File(pickedFile!.path!);
 
-    final ref = FirebaseStorage.instance.ref().child(pathInFirestore);
-    ref.putFile(file);
-  }
+  //   final ref = FirebaseStorage.instance.ref().child(pathInFirestore);
+  //   ref.putFile(file);
+  // }
 
   Stream<List<ThongTinCard>> readThongTinCards() => FirebaseFirestore.instance
       .collection('users')
@@ -213,7 +217,7 @@ Widget buildThongTinCard(ThongTinCard user) => ListTile(
 //               height: 20,
 //               width: 20,
 //               decoration: BoxDecoration(
-//                 color: const Color.fromARGB(255, 131, 177, 149),
+//                 color:  Color.fromARGB(255, 131, 177, 149),
 //                 borderRadius: BorderRadius.circular(14),
 //               ),
 //               child: Text(
@@ -241,7 +245,7 @@ Widget buildThongTinCard(ThongTinCard user) => ListTile(
 //             child: Container(
 //               height: 100,
 //               width: 300,
-//               decoration: const BoxDecoration(
+//               decoration:  BoxDecoration(
 //                 color: Colors.white,
 //                 gradient: LinearGradient(
 //                   begin: FractionalOffset.center,
@@ -330,7 +334,7 @@ Widget buildThongTinCard(ThongTinCard user) => ListTile(
 //                 Container(
 //                   height: 10,
 //                   alignment: Alignment.center,
-//                   padding: const EdgeInsets.only(left: 5),
+//                   padding:  EdgeInsets.only(left: 5),
 //                   child: Text(
 //                     'rate',
 //                     style: TextStyle(

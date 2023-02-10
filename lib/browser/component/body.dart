@@ -6,31 +6,36 @@ import 'package:flutter/material.dart';
 import 'menu.dart';
 
 class Body extends StatelessWidget {
-  const Body({
+  var size, h, w;
+  Body({
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    size = MediaQuery.of(context).size;
+    h = size.height;
+    w = size.width;
     return Container(
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 18.0, horizontal: 18),
+        padding:
+            EdgeInsets.symmetric(vertical: 0.023 * h, horizontal: 0.049 * w),
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
               Container(
-                padding: const EdgeInsets.only(top: 10, bottom: 10),
+                padding: EdgeInsets.only(top: 0.027 * h, bottom: 0.027 * h),
                 alignment: Alignment.centerLeft,
-                child: const Text(
+                child: Text(
                   'Tìm kiếm',
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
                 ),
               ),
-              const YourPlace(),
-              const TwoButton(),
-              const Section(),
+              YourPlace(),
+              TwoButton(),
+              Section(),
               Container(
-                child: const Text(
+                child: Text(
                   "sorted by: Nearby",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
@@ -39,7 +44,7 @@ class Body extends StatelessWidget {
                 ),
                 alignment: Alignment.centerLeft,
               ),
-              const YourProduct(),
+              YourProduct(),
             ],
           ),
         ),

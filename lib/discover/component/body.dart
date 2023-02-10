@@ -11,28 +11,32 @@ import 'heo8.dart';
 import 'popular_product.dart';
 
 class Body extends StatelessWidget {
-  const Body({
+  var size, h, w;
+  Body({
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    size = MediaQuery.of(context).size;
+    h = size.height;
+    w = size.width;
     return SingleChildScrollView(
       child: Column(
         children: <Widget>[
-          const SizedBox(
-            height: 10,
+          SizedBox(
+            height: 0.013,
           ),
-          const YourPlace(),
-          const PopularProducts(),
-          const Heo1(),
-          const Heo2(),
-          const Heo3(),
-          const Heo4(),
-          const Heo5(),
-          const Heo6(),
-          const Heo7(),
-          const Heo8(),
+          YourPlace(),
+          PopularProducts(),
+          Heo1(),
+          Heo2(),
+          Heo3(),
+          Heo4(),
+          Heo5(),
+          Heo6(),
+          Heo7(),
+          Heo8(),
         ],
       ),
     );

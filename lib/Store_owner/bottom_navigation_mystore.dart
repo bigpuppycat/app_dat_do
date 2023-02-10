@@ -15,7 +15,7 @@ class _MyStatefulWidgetState extends State<BottomNavigationmystore> {
   int selectedPage = 0;
 
   final _pageOptions = [
-    const Mystore(),
+    Mystore(),
     const OwnerMore(),
   ];
   @override

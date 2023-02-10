@@ -30,7 +30,7 @@ class Sodienthoai extends StatelessWidget {
         child: Column(
           children: <Widget>[
             SizedBox(
-              height: 16,
+              height: height * 0.02,
             ),
             Container(
               height: height * 0.025,
@@ -44,7 +44,7 @@ class Sodienthoai extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 16,
+              height: height * 0.02,
             ),
             Container(
               height: height * 0.1,
@@ -58,12 +58,13 @@ class Sodienthoai extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 15,
+              height: height * 0.019,
               width: width * 0.9,
             ),
             Container(
               child: Container(
-                padding: EdgeInsets.only(left: 15, right: 15),
+                padding:
+                    EdgeInsets.only(left: 0.041 * width, right: 0.041 * width),
                 alignment: Alignment.centerLeft,
                 child: Text(
                   'Enter store name',
@@ -94,7 +95,7 @@ class Sodienthoai extends StatelessWidget {
                   borderRadius: BorderRadius.circular(30),
                 ),
                 padding: EdgeInsets.symmetric(
-                    vertical: 30, horizontal: width * 0.35),
+                    vertical: 0.038 * height, horizontal: width * 0.35),
               ),
               onPressed: () {
                 Navigator.pushNamed(context, '/Ownermenu');

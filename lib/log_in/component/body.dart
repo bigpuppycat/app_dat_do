@@ -2,55 +2,59 @@ import 'package:app_dat_do/discover/discover.dart';
 import 'package:flutter/material.dart';
 
 class Body extends StatelessWidget {
-  const Body({Key? key}) : super(key: key);
+  var size, h, w;
+  Body({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    size = MediaQuery.of(context).size;
+    h = size.height;
+    w = size.width;
     return SafeArea(
       child: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(8.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
-              const SizedBox(
-                height: 50,
+              SizedBox(
+                height: 0.064 * h,
               ),
-              const Text(
+              Text(
                 'Đồ ăn cho heo',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 36,
                 ),
               ),
-              const SizedBox(
-                height: 40,
+              SizedBox(
+                height: 0.051 * h,
               ),
               Container(
-                height: 400,
-                width: 400,
+                height: 0.51 * h,
+                width: 1.093 * w,
                 alignment: Alignment.center,
                 child: Image.asset(
                   'assets/2.jpg',
                   fit: BoxFit.fill,
                 ),
               ),
-              const SizedBox(
-                height: 16,
+              SizedBox(
+                height: 0.02 * h,
               ),
               OutlinedButton(
                   style: OutlinedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30),
                       ),
-                      padding: const EdgeInsets.symmetric(
-                          vertical: 16, horizontal: 80)),
+                      padding: EdgeInsets.symmetric(
+                          vertical: 0.02 * h, horizontal: 0.219 * w)),
                   onPressed: () {
                     Navigator.pushNamed(context, Discover.routeName);
                   },
-                  child: const Text('Đăng nhập bằng GOOGLE')),
-              const SizedBox(
-                height: 16,
+                  child: Text('Đăng nhập bằng GOOGLE')),
+              SizedBox(
+                height: 0.02 * h,
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
@@ -61,16 +65,16 @@ class Body extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30),
                   ),
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 16, horizontal: 74),
+                  padding: EdgeInsets.symmetric(
+                      vertical: 0.02 * h, horizontal: 0.202 * w),
                 ),
                 onPressed: () {
                   Navigator.pushNamed(context, Discover.routeName);
                 },
-                child: const Text('Đăng nhập bằng FACEBOOK'),
+                child: Text('Đăng nhập bằng FACEBOOK'),
               ),
-              const SizedBox(
-                height: 16,
+              SizedBox(
+                height: 0.02 * h,
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
@@ -80,13 +84,13 @@ class Body extends StatelessWidget {
                   primary: Theme.of(context).colorScheme.primary,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30)),
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 16, horizontal: 88),
+                  padding: EdgeInsets.symmetric(
+                      vertical: 0.02 * h, horizontal: 0.24 * w),
                 ),
                 onPressed: () {
                   Navigator.pushNamed(context, Discover.routeName);
                 },
-                child: const Text('Đăng nhập bằng EMAIL'),
+                child: Text('Đăng nhập bằng EMAIL'),
               ),
             ],
           ),

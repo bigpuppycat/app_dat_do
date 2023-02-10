@@ -18,7 +18,7 @@ class Button1 extends StatelessWidget {
     height = size.height;
     width = size.width;
     return Padding(
-      padding: const EdgeInsets.only(bottom: 20),
+      padding: EdgeInsets.only(bottom: 0.026 * height),
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(12),
@@ -33,7 +33,7 @@ class Button1 extends StatelessWidget {
           ),
           label: Text(
             title,
-            style: const TextStyle(
+            style: TextStyle(
               fontWeight: FontWeight.w900,
               color: Colors.black,
               fontSize: 16,

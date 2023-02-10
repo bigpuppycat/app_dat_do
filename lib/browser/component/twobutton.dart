@@ -1,25 +1,29 @@
 import 'package:flutter/material.dart';
 
 class TwoButton extends StatefulWidget {
-  const TwoButton({Key? key}) : super(key: key);
+  TwoButton({Key? key}) : super(key: key);
 
   @override
   _TwoButtonState createState() => _TwoButtonState();
 }
 
 class _TwoButtonState extends State<TwoButton> {
+  var size, h, w;
   @override
   Widget build(BuildContext context) {
+    size = MediaQuery.of(context).size;
+    h = size.height;
+    w = size.width;
     return Padding(
         // used padding just for TwoButton purpose to separate from the appbar and the main content
-        padding: const EdgeInsets.symmetric(vertical: 10),
+        padding: EdgeInsets.symmetric(vertical: 10),
         child: Container(
           alignment: Alignment.topCenter,
           child: Container(
-              height: 45,
+              height: 0.058 * h,
               // padding: EdgeInsets.all(3.5),
-              width: MediaQuery.of(context).size.width * 0.9,
-              decoration: const BoxDecoration(
+              width: w * 0.9,
+              decoration: BoxDecoration(
                 color: Color.fromARGB(255, 17, 77, 77),
                 borderRadius: BorderRadius.all(Radius.circular(10)),
               ),
@@ -32,10 +36,10 @@ class _TwoButtonState extends State<TwoButton> {
                             alignment: Alignment.center,
                             decoration: BoxDecoration(
                                 color: Colors.grey[400],
-                                borderRadius: const BorderRadius.only(
+                                borderRadius: BorderRadius.only(
                                     bottomLeft: Radius.circular(10),
                                     topLeft: Radius.circular(10))),
-                            child: const Text("List",
+                            child: Text("List",
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 16,
@@ -47,7 +51,7 @@ class _TwoButtonState extends State<TwoButton> {
                           onTap: () {},
                           child: Container(
                             alignment: Alignment.center,
-                            child: const Text("Map",
+                            child: Text("Map",
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 16,

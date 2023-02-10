@@ -17,10 +17,10 @@ class _BottomNavigationState extends State<BottomNavigation> {
   int selectedPage = 0;
 
   final _pageOptions = [
-    const Discover(),
-    const Browse(),
+    Discover(),
+    Browse(),
     Favourite(),
-    const More(),
+    More(),
   ];
 
   @override

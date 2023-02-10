@@ -13,25 +13,25 @@ class Dangki extends StatelessWidget {
     width = size.width;
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
+        title: Text(
           'Help center',
           style: TextStyle(
               fontWeight: FontWeight.bold, fontSize: 30, color: Colors.black),
         ),
         toolbarHeight: 40,
-        backgroundColor: const Color(0xFFFCF9F2),
+        backgroundColor: Color(0xFFFCF9F2),
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back, color: Colors.black),
+          icon: Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
       body: Container(
-        padding: const EdgeInsets.only(left: 12.0, right: 12.0),
+        padding: EdgeInsets.only(left: 0.033 * width, right: 0.033 * width),
         child: Align(
           child: Column(
             children: <Widget>[
               SizedBox(
-                height: 16,
+                height: 0.02 * height,
               ),
               Container(
                 height: height * 0.13,
@@ -42,7 +42,7 @@ class Dangki extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 16,
+                height: 0.02 * height,
               ),
               Container(
                 height: height * 0.03,
@@ -50,14 +50,14 @@ class Dangki extends StatelessWidget {
                 alignment: Alignment.center,
                 child: Text(
                   'How can we help you?',
-                  style: const TextStyle(
+                  style: TextStyle(
                       fontWeight: FontWeight.w900,
                       color: Colors.black,
                       fontSize: 20),
                 ),
               ),
               SizedBox(
-                height: 16,
+                height: 0.02 * height,
               ),
               Container(
                 height: height * 0.03,
@@ -65,7 +65,7 @@ class Dangki extends StatelessWidget {
                 alignment: Alignment.center,
                 child: Text(
                   'Please choose a topic from below',
-                  style: const TextStyle(
+                  style: TextStyle(
                       fontWeight: FontWeight.w500,
                       color: Colors.black,
                       fontSize: 20),
