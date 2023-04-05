@@ -1,6 +1,6 @@
 # app_dat_do
 
-Đây là app tiêu dùng đồ ăn còn dư lại của cửa hàng.
+
 
 ## Getting Started
 
