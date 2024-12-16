@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "499328039522",
+    "project_id": "appdatdo",
+    "storage_bucket": "appdatdo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499328039522:android:f0523d314b0c30e23e6f3b",
+        "android_client_info": {
+          "package_name": "com.example.app_dat_do"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "499328039522-0khshqs1o8t4t8gc6h2172pvg5jpbigr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWnZgWnxICnJIrNHL4M2vjhKZ1yMxjGtU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "499328039522-0khshqs1o8t4t8gc6h2172pvg5jpbigr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

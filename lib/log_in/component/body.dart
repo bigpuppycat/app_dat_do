@@ -16,13 +16,11 @@ class Body extends StatelessWidget {
               const SizedBox(
                 height: 50,
               ),
-              Container(
-                child: Text(
-                  'Đồ ăn cho heo',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 36,
-                  ),
+              const Text(
+                'Đồ ăn cho heo',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 36,
                 ),
               ),
               const SizedBox(
@@ -37,10 +35,6 @@ class Body extends StatelessWidget {
                   fit: BoxFit.fill,
                 ),
               ),
-              // RaisedButton(
-              //   child: const Text("heo bé"),
-              //   onPressed: () {},
-              // )
               const SizedBox(
                 height: 16,
               ),
@@ -49,8 +43,8 @@ class Body extends StatelessWidget {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(30),
                       ),
-                      padding:
-                          EdgeInsets.symmetric(vertical: 16, horizontal: 80)),
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 16, horizontal: 80)),
                   onPressed: () {
                     Navigator.pushNamed(context, Discover.routeName);
                   },
@@ -67,7 +61,8 @@ class Body extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30),
                   ),
-                  padding: EdgeInsets.symmetric(vertical: 16, horizontal: 74),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 16, horizontal: 74),
                 ),
                 onPressed: () {
                   Navigator.pushNamed(context, Discover.routeName);
@@ -85,7 +80,8 @@ class Body extends StatelessWidget {
                   primary: Theme.of(context).colorScheme.primary,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30)),
-                  padding: EdgeInsets.symmetric(vertical: 16, horizontal: 88),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 16, horizontal: 88),
                 ),
                 onPressed: () {
                   Navigator.pushNamed(context, Discover.routeName);
